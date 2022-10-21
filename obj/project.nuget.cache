@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BtQ+hUeUlm/soToSoMV5Eh4swcDkR0KWIAyFmnW9HrRUyiivmqOkjnXKWT/RWfyPXrgAehIQf76X6Ai1VgpK4w==",
+  "dgSpecHash": "wD5HD7qKo4YMnDgPN86YcejmZwrydJzTG8yhBWfLX36nuu/Mo5pdyGtsTEwiHk6/sWFPNncpdobPD9ZWS5WFlg==",
   "success": true,
-  "projectFilePath": "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/2022-2/RapiChicken/RapiChicken.csproj",
+  "projectFilePath": "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/RapiChicken.csproj",
   "expectedPackageFiles": [
     "/home/rjfrdvlpr/.nuget/packages/humanizer.core/2.2.0/humanizer.core.2.2.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",

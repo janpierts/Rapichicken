@@ -9602,11 +9602,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/2022-2/RapiChicken/RapiChicken.csproj",
+      "projectUniqueName": "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/RapiChicken.csproj",
       "projectName": "RapiChicken",
-      "projectPath": "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/2022-2/RapiChicken/RapiChicken.csproj",
+      "projectPath": "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/RapiChicken.csproj",
       "packagesPath": "/home/rjfrdvlpr/.nuget/packages/",
-      "outputPath": "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/2022-2/RapiChicken/obj/",
+      "outputPath": "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/rjfrdvlpr/.nuget/NuGet/NuGet.Config"
