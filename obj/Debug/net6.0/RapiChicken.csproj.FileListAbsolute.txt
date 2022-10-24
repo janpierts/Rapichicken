@@ -2212,3 +2212,13 @@ C:/Users/bvi/Downloads/OneDrive-2022-10-06/RapiChicken/obj/Debug/net6.0/ref/Rapi
 /home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/obj/Debug/net6.0/RapiChicken.pdb
 /home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/obj/Debug/net6.0/RapiChicken.genruntimeconfig.cache
 /home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/obj/Debug/net6.0/ref/RapiChicken.dll
+/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/bin/Debug/net6.0/Twilio.AspNet.Common.dll
+/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/bin/Debug/net6.0/Twilio.AspNet.Core.dll
+/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/bin/Debug/net6.0/System.Web.Mvc.dll
+/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/bin/Debug/net6.0/System.Web.Razor.dll
+/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/bin/Debug/net6.0/System.Web.Helpers.dll
+/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/bin/Debug/net6.0/System.Web.WebPages.Deployment.dll
+/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/bin/Debug/net6.0/System.Web.WebPages.Razor.dll
+/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/bin/Debug/net6.0/System.Web.WebPages.dll
+/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/bin/Debug/net6.0/Microsoft.Web.Infrastructure.dll
+/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/bin/Debug/net6.0/Twilio.AspNet.Mvc.dll

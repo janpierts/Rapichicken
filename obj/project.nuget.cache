@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wD5HD7qKo4YMnDgPN86YcejmZwrydJzTG8yhBWfLX36nuu/Mo5pdyGtsTEwiHk6/sWFPNncpdobPD9ZWS5WFlg==",
+  "dgSpecHash": "kqnPcSTJSAN71Kx/EMaPifQRa6vMvq/FR+A2bCN8hgNYfzkm0iwiCcDB3hAhV15ozzdGedmzVE4ZIPdScXgKNw==",
   "success": true,
   "projectFilePath": "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/RapiChicken.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,9 @@
     "/home/rjfrdvlpr/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/messagepack.annotations/2.1.152/messagepack.annotations.2.1.152.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/messagepackanalyzer/2.1.152/messagepackanalyzer.2.1.152.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/microsoft.aspnet.mvc/5.2.7/microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/microsoft.aspnet.razor/3.2.7/microsoft.aspnet.razor.3.2.7.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/microsoft.aspnet.webpages/3.2.7/microsoft.aspnet.webpages.3.2.7.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.aspnetcore.mvc.razor.extensions/6.0.9/microsoft.aspnetcore.mvc.razor.extensions.6.0.9.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.aspnetcore.mvc.razor.runtimecompilation/6.0.9/microsoft.aspnetcore.mvc.razor.runtimecompilation.6.0.9.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.aspnetcore.razor.language/6.0.9/microsoft.aspnetcore.razor.language.6.0.9.nupkg.sha512",
@@ -32,9 +35,16 @@
     "/home/rjfrdvlpr/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.diasymreader/1.3.0/microsoft.diasymreader.1.3.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.dotnet.scaffolding.shared/6.0.9/microsoft.dotnet.scaffolding.shared.6.0.9.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/microsoft.extensions.configuration.binder/6.0.0/microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.0/microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.extensions.dependencymodel/6.0.0/microsoft.extensions.dependencymodel.6.0.0.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/microsoft.extensions.http/6.0.0/microsoft.extensions.http.6.0.0.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/microsoft.extensions.logging/6.0.0/microsoft.extensions.logging.6.0.0.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.identitymodel.abstractions/6.19.0/microsoft.identitymodel.abstractions.6.19.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.19.0/microsoft.identitymodel.jsonwebtokens.6.19.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.identitymodel.logging/6.19.0/microsoft.identitymodel.logging.6.19.0.nupkg.sha512",
@@ -50,6 +60,7 @@
     "/home/rjfrdvlpr/.nuget/packages/microsoft.visualstudio.web.codegeneration.templating/6.0.9/microsoft.visualstudio.web.codegeneration.templating.6.0.9.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.visualstudio.web.codegeneration.utils/6.0.9/microsoft.visualstudio.web.codegeneration.utils.6.0.9.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.visualstudio.web.codegenerators.mvc/6.0.9/microsoft.visualstudio.web.codegenerators.mvc.6.0.9.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/microsoft.web.infrastructure/1.0.0/microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.win32.registry/4.7.0/microsoft.win32.registry.4.7.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
@@ -101,7 +112,7 @@
     "/home/rjfrdvlpr/.nuget/packages/system.console/4.3.0/system.console.4.3.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/system.data.sqlclient/4.8.3/system.data.sqlclient.4.8.3.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/system.diagnostics.debug/4.3.0/system.diagnostics.debug.4.3.0.nupkg.sha512",
-    "/home/rjfrdvlpr/.nuget/packages/system.diagnostics.diagnosticsource/4.3.0/system.diagnostics.diagnosticsource.4.3.0.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/system.diagnostics.tools/4.3.0/system.diagnostics.tools.4.3.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/system.diagnostics.tracing/4.3.0/system.diagnostics.tracing.4.3.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/system.drawing.common/6.0.0/system.drawing.common.6.0.0.nupkg.sha512",
@@ -166,7 +177,61 @@
     "/home/rjfrdvlpr/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/home/rjfrdvlpr/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
-    "/home/rjfrdvlpr/.nuget/packages/twilio/5.80.1/twilio.5.80.1.nupkg.sha512"
+    "/home/rjfrdvlpr/.nuget/packages/twilio/5.80.1/twilio.5.80.1.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/twilio.aspnet.common/6.0.0/twilio.aspnet.common.6.0.0.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/twilio.aspnet.core/6.0.0/twilio.aspnet.core.6.0.0.nupkg.sha512",
+    "/home/rjfrdvlpr/.nuget/packages/twilio.aspnet.mvc/6.0.0/twilio.aspnet.mvc.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Mvc 5.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Razor 3.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebPages 3.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Twilio.AspNet.Mvc 6.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Twilio.AspNet.Mvc",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
