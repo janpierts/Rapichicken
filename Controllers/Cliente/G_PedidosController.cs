@@ -2,7 +2,7 @@
 using RapiChicken.Datos;
 using RapiChicken.Models;
 
-namespace RapiChicken.Controllers
+namespace RapiChicken.Controllers.Cliente
 {
     public class G_PedidosController : Controller
     {
