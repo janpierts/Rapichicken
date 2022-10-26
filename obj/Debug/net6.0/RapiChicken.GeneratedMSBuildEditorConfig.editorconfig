@@ -15,20 +15,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = /home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/Gerente/G_Inventario/Eliminar_PInventario.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VyZW50ZS9HX0ludmVudGFyaW8vRWxpbWluYXJfUEludmVudGFyaW8uY3NodG1s
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Inventario/Eliminar_PInventario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19JbnZlbnRhcmlvL0VsaW1pbmFyX1BJbnZlbnRhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/Gerente/G_Inventario/FEditar_Inventario.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VyZW50ZS9HX0ludmVudGFyaW8vRkVkaXRhcl9JbnZlbnRhcmlvLmNzaHRtbA==
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Inventario/FEditar_Inventario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19JbnZlbnRhcmlvL0ZFZGl0YXJfSW52ZW50YXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/Gerente/G_Inventario/FGuardar_Inventario.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VyZW50ZS9HX0ludmVudGFyaW8vRkd1YXJkYXJfSW52ZW50YXJpby5jc2h0bWw=
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Inventario/FGuardar_Inventario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19JbnZlbnRhcmlvL0ZHdWFyZGFyX0ludmVudGFyaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/Gerente/G_Inventario/Listar_Inventario.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VyZW50ZS9HX0ludmVudGFyaW8vTGlzdGFyX0ludmVudGFyaW8uY3NodG1s
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Inventario/Listar_Inventario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19JbnZlbnRhcmlvL0xpc3Rhcl9JbnZlbnRhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Pedidos/FEditar_Pedido.cshtml]
