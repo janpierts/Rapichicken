@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = /home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Catalogo/Editar_SCatalogo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19DYXRhbG9nby9FZGl0YXJfU0NhdGFsb2dvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Catalogo/Eliminar_Catalogo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19DYXRhbG9nby9FbGltaW5hcl9DYXRhbG9nby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Catalogo/FEditar_Catalogo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19DYXRhbG9nby9GRWRpdGFyX0NhdGFsb2dvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Catalogo/FGuardar_Catalogo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19DYXRhbG9nby9GR3VhcmRhcl9DYXRhbG9nby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Catalogo/Listar_Catalogo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19DYXRhbG9nby9MaXN0YXJfQ2F0YWxvZ28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Inventario/Editar_SInventario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19JbnZlbnRhcmlvL0VkaXRhcl9TSW52ZW50YXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -41,6 +61,78 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Pedidos/Listar_Catalogo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19QZWRpZG9zL0xpc3Rhcl9DYXRhbG9nby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Personal/Eliminar_Personal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19QZXJzb25hbC9FbGltaW5hcl9QZXJzb25hbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Personal/FEditar_Personal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19QZXJzb25hbC9GRWRpdGFyX1BlcnNvbmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Personal/FGuardar_Personal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19QZXJzb25hbC9GR3VhcmRhcl9QZXJzb25hbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Personal/Listar_Personal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19QZXJzb25hbC9MaXN0YXJfUGVyc29uYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Promociones/Editar_SPromociones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Qcm9tb2Npb25lcy9FZGl0YXJfU1Byb21vY2lvbmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Promociones/Eliminar_Promociones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Qcm9tb2Npb25lcy9FbGltaW5hcl9Qcm9tb2Npb25lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Promociones/FEditar_Promociones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Qcm9tb2Npb25lcy9GRWRpdGFyX1Byb21vY2lvbmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Promociones/FGuardar_Promociones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Qcm9tb2Npb25lcy9GR3VhcmRhcl9Qcm9tb2Npb25lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Promociones/Listar_Promociones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Qcm9tb2Npb25lcy9MaXN0YXJfUHJvbW9jaW9uZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Roles/Eliminar_Roles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Sb2xlcy9FbGltaW5hcl9Sb2xlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Roles/FEditar_Roles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Sb2xlcy9GRWRpdGFyX1JvbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Roles/FGuardar_Roles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Sb2xlcy9GR3VhcmRhcl9Sb2xlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Roles/Listar_Roles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Sb2xlcy9MaXN0YXJfUm9sZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Usuarios/Editar_RUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Vc3Vhcmlvcy9FZGl0YXJfUlVzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Usuarios/Eliminar_Usuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Vc3Vhcmlvcy9FbGltaW5hcl9Vc3VhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Usuarios/FEditar_Usuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Vc3Vhcmlvcy9GRWRpdGFyX1VzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Usuarios/FGuardar_Usuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Vc3Vhcmlvcy9GR3VhcmRhcl9Vc3VhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Usuarios/Listar_Usuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19Vc3Vhcmlvcy9MaXN0YXJfVXN1YXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/Home/Index.cshtml]

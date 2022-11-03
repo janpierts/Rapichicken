@@ -15,10 +15,10 @@ using Twilio.AspNet.Mvc;
 
 namespace RapiChicken.Controllers
 {
-    public class G_InventarioController : Controller
+    public class G_PromocionesController : Controller
     {
         InventarioDatos _InventarioDatos = new InventarioDatos();
-        public IActionResult Listar_Inventario()
+        public IActionResult Listar_Promociones()
         {
             var oLista = _InventarioDatos.Listar();
             return View(oLista);

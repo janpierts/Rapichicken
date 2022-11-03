@@ -2,7 +2,7 @@
 
 namespace RapiChicken.Models
 {
-    public class InventarioModel
+    public class UsuariosModel
     {
         public int InventarioId { get; set; }
 

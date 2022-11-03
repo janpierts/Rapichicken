@@ -2,24 +2,15 @@
 
 namespace RapiChicken.Models
 {
-    public class InventarioModel
+    public class RolesModel
     {
-        public int InventarioId { get; set; }
+        public int RolId { get; set; }
 
-        [Required(ErrorMessage ="El campo nombre de producto es obligatorio")]
-        public string NProducto { get; set; } = null!;
-        public string? Descripcion { get; set; }
+        [Required(ErrorMessage ="El campo nombre del rol es obligatorio")]
+        public string NRol { get; set; } = null!;
+		
+		[Required(ErrorMessage ="El campo nombre del rol es obligatorio")]
+        public string Descripcion { get; set; } = null!;
 
-        [Required(ErrorMessage = "El campo tipo de producto es obligatorio")]
-        public string TipoProducto { get; set; } = null!;
-
-        [Required(ErrorMessage = "El campo Estado de producto es obligatorio")]
-        public string EstadoProducto { get; set; } = null!;
-
-        [Required(ErrorMessage = "El campo stock de producto es obligatorio")]
-        public int Stock { get; set; }
-
-        [Required(ErrorMessage = "El campo detalle de unidad es obligatorio")]
-        public string DetalleUnidad { get; set; } = null!;
     }
 }
