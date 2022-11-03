@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = /home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Inventario/Editar_SInventario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19JbnZlbnRhcmlvL0VkaXRhcl9TSW52ZW50YXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Inventario/Eliminar_PInventario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19JbnZlbnRhcmlvL0VsaW1pbmFyX1BJbnZlbnRhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

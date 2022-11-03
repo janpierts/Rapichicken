@@ -153,6 +153,32 @@ namespace RapiChicken.Datos
             }
             return rpta;
         }
+        
+        public bool EditarS(InventarioModel oEditarI)
+        {
+            bool rpta;
+
+            try
+            {
+                var cn = new Conexion();
+                using (var con = new SqlConnection(cn.getconexion()))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("sp_EditarStock", con);
+                    cmd.Parameters.AddWithValue("I_Id", oEditarI.InventarioId);
+                    cmd.Parameters.AddWithValue("I_Stock", oEditarI.Stock);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                }
+                rpta = true;
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+                rpta = false;
+            }
+            return rpta;
+        }
 
         public bool Eliminar(int I_ID)
         {

@@ -55,6 +55,26 @@ namespace RapiChicken.Controllers
             else
                 return View();
         }
+        
+        public IActionResult Editar_SInventario(int I_ID)
+        {
+            var oID_Inventario = _InventarioDatos.ObtenerId(I_ID);
+            return View(oID_Inventario);
+        }
+
+        [HttpPost]
+        public IActionResult Editar_SInventario(InventarioModel oI_ID)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var up = _InventarioDatos.EditarS(oI_ID);
+
+            if (up)
+                return RedirectToAction("Listar_Inventario");
+            else
+                return View();
+        }
 
         public IActionResult Eliminar_PInventario(int I_ID)
         {

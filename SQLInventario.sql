@@ -23,6 +23,79 @@ create TABLE [dbo].[Inventario](
 ) ON [PRIMARY]
 GO
 
+/****** Object:  Table [dbo].[Personas]    Script Date: 5/10/2022 01:01:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+create TABLE [dbo].[Personas](
+	[Personas_id] [int] IDENTITY(1,1) NOT NULL,
+	[nombres] [varchar](250) NOT NULL,
+	[apellidos] [varchar](250) NOT NULL,
+	[telefono] [int] NOT NULL,
+	[f_nacimiento] [date] NOT NULL,
+	[direccion] [varchar](500) NOT NULL,
+	[sexo] [char] NOT NULL,
+	[FK_Usuarios] [int] FOREIGN KEY REFERENCES Usuarios(Usuarios_id),
+ CONSTRAINT [PK_Personas] PRIMARY KEY CLUSTERED 
+(
+	[Personas_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 5/10/2022 01:01:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+create TABLE [dbo].[Usuarios](
+	[Usuarios_id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](250) NOT NULL,
+	[pass] [varchar](500) NOT NULL,
+ CONSTRAINT [PK_Usuarios] PRIMARY KEY CLUSTERED 
+(
+	[Usuarios_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Roles]    Script Date: 5/10/2022 01:01:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+create TABLE [dbo].[Roles](
+	[Roles_id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](250) NOT NULL,
+	[description] [varchar](500) NOT NULL,
+ CONSTRAINT [PK_Roles] PRIMARY KEY CLUSTERED 
+(
+	[Roles_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Usuarios_has_Roles]    Script Date: 5/10/2022 01:01:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+create TABLE [dbo].[Usuarios_has_Roles](
+	[Usuarios_id] [int],
+	[Roles_id] [int],
+	CONSTRAINT Usuarios_has_Roles_id PRIMARY KEY ([Usuarios_id], [Roles_id]),
+	CONSTRAINT FK_Usuarios FOREIGN KEY ([Usuarios_id]) REFERENCES Usuarios ([Usuarios_id]),
+	CONSTRAINT FK_Roles FOREIGN KEY ([Roles_id]) REFERENCES Roles (Roles_id));
+GO
 
 /****** Object:  Table [dbo].[Pedidos]    Script Date: 6/10/2022 17:59:00 ******/
 SET ANSI_NULLS ON
