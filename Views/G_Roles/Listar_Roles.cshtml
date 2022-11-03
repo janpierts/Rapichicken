@@ -1,4 +1,4 @@
-﻿@model List<InventarioModel>
+﻿@model List<RolesModel>
 @{
     ViewData["Title"] = "Listar_Roles";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,7 +9,7 @@
     Gestionar Roles
   </div>
   <div class="card-body">
-    <a asp-action="FGuardar_Inventario" asp-controller="G_Roles" class="btn btn-success"><i class="bi bi-plus-circle"></i> Crear Nuevo</a>
+    <a asp-action="FGuardar_Roles" asp-controller="G_Roles" class="btn btn-success"><i class="bi bi-plus-circle"></i> Crear Nuevo</a>
     <hr />
     <table class="table table-dark table-striped">
         <thead>
@@ -24,12 +24,12 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>@item.InventarioId</td>
-                        <td>@item.NProducto</td>
+                        <td>@item.RolId</td>
+                        <td>@item.NRol</td>
                         <td>@item.Descripcion</td>
                         <td>
-                            <a asp-action="FEditar_Inventario" asp-controller="G_Roles" class="btn btn-primary btn-sm" asp-route-I_ID="@item.InventarioId">Editar</a>
-                            <a asp-action="Eliminar_PInventario" asp-controller="G_Roles" class="btn btn-danger btn-sm" asp-route-I_ID="@item.InventarioId">Eliminar</a>
+                            <a asp-action="FEditar_Roles" asp-controller="G_Roles" class="btn btn-primary btn-sm" asp-route-I_ID="@item.RolId">Editar</a>
+                            <a asp-action="Eliminar_Roles" asp-controller="G_Roles" class="btn btn-danger btn-sm" asp-route-I_ID="@item.RolId">Eliminar</a>
                         </td>
                     </tr>
 

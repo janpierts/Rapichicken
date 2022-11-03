@@ -82,18 +82,18 @@ create TABLE [dbo].[Roles](
 ) ON [PRIMARY]
 GO
 
-/****** Object:  Table [dbo].[Usuarios_has_Roles]    Script Date: 5/10/2022 01:01:48 ******/
+/****** Object:  Table [dbo].[Personas_has_Roles]    Script Date: 5/10/2022 01:01:48 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-create TABLE [dbo].[Usuarios_has_Roles](
-	[Usuarios_id] [int],
+create TABLE [dbo].[Personas_has_Roles](
+	[Personas_id] [int],
 	[Roles_id] [int],
-	CONSTRAINT Usuarios_has_Roles_id PRIMARY KEY ([Usuarios_id], [Roles_id]),
-	CONSTRAINT FK_Usuarios FOREIGN KEY ([Usuarios_id]) REFERENCES Usuarios ([Usuarios_id]),
+	CONSTRAINT Personas_has_Roles_id PRIMARY KEY ([Personas_id], [Roles_id]),
+	CONSTRAINT FK_Personas FOREIGN KEY ([Personas_id]) REFERENCES Personas ([Personas_id]),
 	CONSTRAINT FK_Roles FOREIGN KEY ([Roles_id]) REFERENCES Roles (Roles_id));
 GO
 
@@ -193,5 +193,50 @@ create procedure sp_ObtenerIdInventario(
 as
 begin
 	select * from Inventario where @I_ID=Inventario_id
+end
+go
+
+create procedure sp_ListarRoles
+as
+begin
+	select * from Roles
+end
+go
+
+create procedure sp_GuardarRoles(
+@NR varchar(250),
+@D varchar(500)
+)
+as
+begin
+	insert into Roles(name,description) 
+	values(@NR,@D)
+end
+go
+
+create procedure sp_EditarRoles(
+@R_Id int,
+@NR varchar(250),
+@D varchar(500)
+)
+as
+begin
+	update Roles set name = @NR,description = @D where Roles_id = @R_Id
+end
+go
+
+create procedure sp_ObtenerIdRoles(
+@R_ID int
+)
+as
+begin
+	select * from Roles where @R_ID=Roles_id
+end
+go
+
+create procedure sp_EliminarRoles(@R_Id int)
+as
+begin
+	delete from Roles where Roles_id = @R_Id
 end
 go
