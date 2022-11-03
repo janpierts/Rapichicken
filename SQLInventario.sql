@@ -92,8 +92,18 @@ create procedure sp_EditarInventario(
 as
 begin
 	update Inventario set n_producto = @NombreP,descripcion = @I_D,tipo_producto = @T_P,
-	estado_producto = @E_P,stock = @I_Stock,detalle_unidad = @I_D_Unidad 
+	estado_producto = @E_P,detalle_unidad = @I_D_Unidad 
 	where Inventario_id = @I_Id
+end
+go
+
+create procedure sp_EditarStock(
+@I_Id int,
+@I_Stock int
+)
+as
+begin
+	update Inventario set stock = @I_Stock where Inventario_id = @I_Id
 end
 go
 
