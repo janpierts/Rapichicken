@@ -31,9 +31,9 @@ namespace RapiChicken.Models
         public string Dir { get; set; } = null!;
 		
 		[Required(ErrorMessage = "El campo sexo es obligatorio(f/m)")]
-		public char sex { get; set; } = null!;
+		public char sex { get; set; }
 		
-		public int RolesId { get; set; }
+		//public int RolesId { get; set; }
 		
 		[Required(ErrorMessage = "El campo rol es obligatorio")]
 		public string NRoles { get; set; } = null!;

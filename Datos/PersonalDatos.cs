@@ -4,27 +4,33 @@ using System.Data;
 
 namespace RapiChicken.Datos
 {
-    public class RolesDatos
+    public class PersonalDatos
     {
-        public List<RolesModel> Listar()
+        public List<PersonalModel> Listar()
         {
-            var oLista = new List<RolesModel>();
+            var oLista = new List<PersonalModel>();
             var cn = new Conexion();
             using (var con = new SqlConnection(cn.getconexion()))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("sp_ListarRoles", con);
+                SqlCommand cmd = new SqlCommand("sp_ListarPersonal", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var dr = cmd.ExecuteReader())
                 {
                     while (dr.Read())
                     {
-                        oLista.Add(new RolesModel()
+                        oLista.Add(new PersonalModel()
                         {
-                            RolId = Convert.ToInt32(dr["Roles_id"]),
-                            NRol = dr["name"].ToString(),
-                            Descripcion = dr["description"].ToString()
+                            PersonalId = Convert.ToInt32(dr["PID"]),
+                            NPersonal = dr["NP"].ToString(),
+							APersonal = dr["AP"].ToString(),
+							PTel = Convert.ToInt32(dr["PT"]),
+							FN = Convert.ToDateTime(dr["FN"]),
+							Dni = Convert.ToInt32(dr["DNI"]),
+							Dir = dr["DIR"].ToString(),
+							sex = Convert.ToChar(dr["SX"]),
+							NRoles = dr["RN"].ToString()
                         });
                     }
                 }

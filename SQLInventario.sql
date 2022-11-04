@@ -245,9 +245,9 @@ go
 create procedure sp_ListarPersonal
 as
 begin
-	select Personas.Personas_id,Personas.nombres,Personas.apellidos,Personas.telefono,Personas.f_nacimiento,Personas.dni,Personas.direccion,Personas.sexo,Roles.name from Personas
-	full outer join Personas_has_Roles on Personas.Personas_id=Personas_has_Roles.Personas_id
-	full outer join Roles on Personas_has_Roles.Roles_id=Roles.Roles_id
+	select Personas.Personas_id as PID,Personas.nombres as NP,Personas.apellidos as AP,Personas.telefono as PT,Personas.f_nacimiento as FN,Personas.dni as DNI,Personas.direccion as DIR,Personas.sexo as SX,Roles.name as RN from Personas
+	join Personas_has_Roles on Personas.Personas_id=Personas_has_Roles.Personas_id
+	join Roles on Personas_has_Roles.Roles_id=Roles.Roles_id
 	where Roles.name != 'Cliente' and Roles.name != 'Invitado'
 end
 go
