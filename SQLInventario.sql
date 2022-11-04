@@ -36,6 +36,7 @@ create TABLE [dbo].[Personas](
 	[apellidos] [varchar](250) NOT NULL,
 	[telefono] [int] NOT NULL,
 	[f_nacimiento] [date] NOT NULL,
+	[dni] [int] NOT NULL,
 	[direccion] [varchar](500) NOT NULL,
 	[sexo] [char] NOT NULL,
 	[FK_Usuarios] [int] FOREIGN KEY REFERENCES Usuarios(Usuarios_id),
@@ -238,5 +239,42 @@ create procedure sp_EliminarRoles(@R_Id int)
 as
 begin
 	delete from Roles where Roles_id = @R_Id
+end
+go
+
+create procedure sp_ListarPersonal
+as
+begin
+	select Personas.Personas_id,Personas.nombres,Personas.apellidos,Personas.telefono,Personas.f_nacimiento,Personas.dni,Personas.direccion,Personas.sexo,Roles.name from Personas
+	full outer join Personas_has_Roles on Personas.Personas_id=Personas_has_Roles.Personas_id
+	full outer join Roles on Personas_has_Roles.Roles_id=Roles.Roles_id
+	where Roles.name != 'Cliente' and Roles.name != 'Invitado'
+end
+go
+
+create procedure sp_GuardarPersonal(
+@NP varchar(250),
+@AP varchar(250),
+@T int,
+@F_N date,
+@Dni int,
+@D varchar(500),
+@S char,
+@R_id int
+)
+as
+begin
+declare @P_id int
+	begin
+		insert into Personas(nombres,apellidos,telefono,f_nacimiento,dni,direccion,sexo) 
+		values(@NP,@AP,@T,@F_N,@Dni,@D,@S)
+	end
+	begin
+		select @P_id = Personas_id from Personas where dni=@Dni
+	end
+	begin
+		insert into Personas_has_Roles(Personas_id,Roles_id)
+		values(@P_id,@R_id)
+	end
 end
 go
