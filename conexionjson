@@ -1,0 +1,10 @@
+ reemplazar:
+ 
+ "conexion": "data source=localhost; database=rapichicken; user id=SA; password=Dvlpdatabase2022;" 
+ 
+ 
+ por:
+ 
+     "conexion": "server=(nombre del servidor en windows en este lugar y borrar comillas); database=rapichicken; integrated security=true"
+
+pdt: borrar la base de datos y copiar el script completo del archivo SQLInventario.sql, correr dicho script en la nueva base datos llamada rapichicken
