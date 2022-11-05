@@ -37,6 +37,57 @@ namespace RapiChicken.Datos
             }
             return oLista;
         }
+        
+        public List<PersonalModel> ListarR()
+        {
+            var oRoles = new List<PersonalModel>();
+            var cn = new Conexion();
+            using (var con = new SqlConnection(cn.getconexion()))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("sp_ListarRoles", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (var dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        oRoles.Add(new PersonalModel()
+                        {
+                            RolesId = Convert.ToInt32(dr["Roles_id"]),
+                            NRoles = dr["name"].ToString(),
+                            Descripcion = dr["description"].ToString()
+                        });
+                    }
+                }
+            }
+            return oRoles;
+        }
+        
+        public PersonalModel ObtenerRId(int ID)
+        {
+            var oI_ID = new PersonalModel();
+            var cn = new Conexion();
+            using (var con = new SqlConnection(cn.getconexion()))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("sp_ObtenerIdRoles", con);
+                cmd.Parameters.AddWithValue("R_ID",ID);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using(var dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        oI_ID.RolesId = Convert.ToInt32(dr["Roles_id"]);
+                        oI_ID.NRoles = dr["name"].ToString();
+                        oI_ID.Descripcion = dr["description"].ToString();
+                    }
+                }
+            }
+            return oI_ID;
+        }
+        
         public RolesModel ObtenerId(int ID)
         {
             var oI_ID = new RolesModel();

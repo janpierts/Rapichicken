@@ -1,4 +1,4 @@
-﻿@model InventarioModel
+﻿@model PersonalModel
 @{
     ViewData["Title"] = "FGuardar_Inventario";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,38 +6,20 @@
 
 <div class="card">
   <div class="card-header">
-    Guardar Producto
+    Guardar Personal
   </div>
   <div class="card-body">
-        <form asp-action="FGuardar_Inventario" asp-controller="G_Inventario" method="post">
+        <form asp-action="FGuardar_Personal" asp-controller="G_Personal" method="post">
        <div class="mb-3">
             <label class="form-label">Nombre de Producto</label>
-                <input asp-for="NProducto" type="text" class="form-control">
-                <span asp-validation-for="NProducto" class="text-danger"></span>
+                <input asp-for="NRoles" type="text" class="form-control">
+                <span asp-validation-for="NRoles" class="text-danger"></span>
        </div>
+       
        <div class="mb-3">
-            <label class="form-label">Descripcion del producto</label>
-                <input asp-for="Descripcion" type="text" class="form-control">
-       </div>
-       <div class="mb-3">
-            <label class="form-label">Tipo de producto</label>
-                <input asp-for="TipoProducto" type="text" class="form-control">
-                <span asp-validation-for="TipoProducto" class="text-danger"></span>
-       </div>
-       <div class="mb-3">
-            <label class="form-label">Estado de Producto</label>
-                <input asp-for="EstadoProducto" type="text" class="form-control">
-                <span asp-validation-for="EstadoProducto" class="text-danger"></span>
-       </div>
-       <div class="mb-3">
-            <label class="form-label">Stock</label>
-                <input asp-for="Stock" type="number" class="form-control">
-                <span asp-validation-for="Stock" class="text-danger"></span>
-       </div>
-       <div class="mb-3">
-            <label class="form-label">Detalle de Unidad del producto</label>
-                <input asp-for="DetalleUnidad" type="text" class="form-control">
-                <span asp-validation-for="DetalleUnidad" class="text-danger"></span>
+            <label class="form-label">Nombre de Producto</label>
+                <input asp-for="NRoles" type="text" class="form-control">
+                <span asp-validation-for="NRoles" class="text-danger"></span>
        </div>
        <button type="submit" class="btn btn-primary">Guardar</button>
        <a asp-action="Listar_Inventario" asp-controller="G_Inventario" class="btn btn-warning">Volver a la lista</a>

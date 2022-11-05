@@ -23,11 +23,12 @@ namespace RapiChicken.Controllers
             var oLista = _PersonalDatos.Listar();
             return View(oLista);
         }
-        /*public IActionResult FGuardar_Roles()
+        public IActionResult FGuardar_Personal()
         {
+			var oRoles = _PersonalDatos.ListarR();
             return View();
         }
-        [HttpPost]
+        /*[HttpPost]
         public IActionResult FGuardar_Roles(RolesModel oGuardarR)
         {
             var save = _RolesDatos.Guardar(oGuardarR);
