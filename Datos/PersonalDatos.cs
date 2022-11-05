@@ -112,7 +112,7 @@ namespace RapiChicken.Datos
             return oI_ID;
         }
 
-        public bool Guardar(RolesModel oGuardarR)
+        public bool Guardar(PersonalModel oGuardarP)
         {
             bool rpta;
 
@@ -122,9 +122,15 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_GuardarRoles", con);
-                    cmd.Parameters.AddWithValue("NR", oGuardarR.NRol);
-                    cmd.Parameters.AddWithValue("D", oGuardarR.Descripcion);
+                    SqlCommand cmd = new SqlCommand("sp_GuardarPersonal", con);
+                    cmd.Parameters.AddWithValue("NP", oGuardarP.NPersonal);
+                    cmd.Parameters.AddWithValue("AP", oGuardarP.APersonal);
+					cmd.Parameters.AddWithValue("T", oGuardarP.PTel);
+					cmd.Parameters.AddWithValue("F_N", oGuardarP.FN);
+					cmd.Parameters.AddWithValue("Dni", oGuardarP.Dni);
+					cmd.Parameters.AddWithValue("D", oGuardarP.Dir);
+					cmd.Parameters.AddWithValue("S", oGuardarP.sex);
+					cmd.Parameters.AddWithValue("R_id", oGuardarP.RolesId);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }

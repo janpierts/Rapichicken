@@ -28,16 +28,16 @@ namespace RapiChicken.Controllers
 			var oRoles = _PersonalDatos.ListarR();
             return View();
         }
-        /*[HttpPost]
-        public IActionResult FGuardar_Roles(RolesModel oGuardarR)
+        [HttpPost]
+        public IActionResult FGuardar_Roles(PersonalModel oGuardarP)
         {
-            var save = _RolesDatos.Guardar(oGuardarR);
+            var save = _PersonalDatos.Guardar(oGuardarP);
             if (save)
-                return RedirectToAction("Listar_Roles");
+                return RedirectToAction("Listar_Personal");
             else
                 return View();
         }
-        public IActionResult FEditar_Roles(int I_ID)
+        /*public IActionResult FEditar_Roles(int I_ID)
         {
             var oID_Roles = _RolesDatos.ObtenerId(I_ID);
             return View(oID_Roles);
