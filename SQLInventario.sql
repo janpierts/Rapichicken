@@ -278,3 +278,43 @@ declare @P_id int
 	end
 end
 go
+
+create procedure sp_GuardarCliente(
+@NP varchar(250),
+@AP varchar(250),
+@T int,
+@F_N date,
+@Dni int,
+@D varchar(500),
+@S char,
+@NU varchar(250),
+@P varchar(500)
+)
+as
+begin
+declare @P_id int
+declare @U_id int
+	begin
+		insert into Personas(nombres,apellidos,telefono,f_nacimiento,dni,direccion,sexo) 
+		values(@NP,@AP,@T,@F_N,@Dni,@D,@S)
+	end
+	begin
+		insert into
+		Usuarios(name,pass)
+		values(@NU,@P)
+	end
+	begin
+		select @P_id = Personas_id from Personas where dni=@Dni
+	end
+	begin
+		insert into Personas_has_Roles(Personas_id,Roles_id)
+		values(@P_id,1)
+	end
+	begin
+		select @U_id = Usuarios_id from Usuarios where name=@NU and pass=@P
+	end
+	begin
+		update Personas set FK_Usuarios=@U_id where dni=@Dni
+	end
+end
+go
