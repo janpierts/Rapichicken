@@ -123,7 +123,7 @@ namespace RapiChicken.Datos
             return rpta;
         }
 
-        public bool Editar(InventarioModel oEditarI)
+        public bool EditarP(CatalogoModel oEditarI)
         {
             bool rpta;
 
@@ -133,14 +133,12 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_EditarInventario", con);
-                    cmd.Parameters.AddWithValue("I_Id", oEditarI.InventarioId);
-                    cmd.Parameters.AddWithValue("NombreP", oEditarI.NProducto);
-                    cmd.Parameters.AddWithValue("I_D", oEditarI.Descripcion);
-                    cmd.Parameters.AddWithValue("T_P", oEditarI.TipoProducto);
-                    cmd.Parameters.AddWithValue("E_P", oEditarI.EstadoProducto);
-                    cmd.Parameters.AddWithValue("I_Stock", oEditarI.Stock);
-                    cmd.Parameters.AddWithValue("I_D_Unidad", oEditarI.DetalleUnidad);
+                    SqlCommand cmd = new SqlCommand("sp_GuardarPedido", con);
+					cmd.Parameters.AddWithValue("CID", oEditarI.CatalogoId);
+                    cmd.Parameters.AddWithValue("NP", oEditarI.NProducto);
+                    cmd.Parameters.AddWithValue("DP", oEditarI.Descripcion);
+                    cmd.Parameters.AddWithValue("C", oEditarI.C);
+                    cmd.Parameters.AddWithValue("NPC", oEditarI.NPC);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }

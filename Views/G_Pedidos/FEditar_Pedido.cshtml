@@ -21,14 +21,30 @@
                 <input asp-for="Descripcion" type="text" class="form-control" readonly>
             </div>
             <div class="mb-3">
-                <label class="form-label">Cantidad</label>
-                <input asp-for="Stock" type="number" class="form-control">
+                <input asp-for="TipoProducto" type="hidden" class="form-control" readonly>
+                <span asp-validation-for="TipoProducto" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <input asp-for="EstadoProducto" type="hidden" class="form-control" readonly>
+                <span asp-validation-for="EstadoProducto" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <input asp-for="Stock" type="hidden" class="form-control">
                 <span asp-validation-for="Stock" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label class="form-label">Detalle de Unidad del producto</label>
-                <input asp-for="DetalleUnidad" type="text" class="form-control" readonly>
+                <input asp-for="DetalleUnidad" type="hidden" class="form-control" readonly>
                 <span asp-validation-for="DetalleUnidad" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Cantidad</label>
+                <input asp-for="C" type="number" class="form-control">
+                <span asp-validation-for="C" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nombre de cliente</label>
+                <input asp-for="NPC" type="text" class="form-control">
+                <span asp-validation-for="NPC" class="text-danger"></span>
             </div>
             <button type="submit" class="btn btn-primary">Comprar</button>
             <a asp-action="Listar_Catalogo" asp-controller="G_Pedidos" class="btn btn-warning">Volver a la lista</a>

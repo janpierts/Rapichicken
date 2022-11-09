@@ -398,6 +398,24 @@ begin
 end
 go
 
+create procedure sp_GuardarPedido(
+@NP varchar(250),
+@DP varchar(500),
+@C int,
+@NPC varchar(50)
+)
+as
+begin
+	insert into Pedidos(N_Pedido,D_Pedido,Cantidad,NP_C)
+	values(@NP,@DP,@C,@NPC)
+end
+begin
+	update Inventario set stock=stock-@C where n_producto='pollo' and estado_producto='Cooler'
+end
+go
+/*
+Scripts data fija
+*/
 insert into Roles(name,description) 
 values ('Cliente','Puede generar carrito de compras')
 go

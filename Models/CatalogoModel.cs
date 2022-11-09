@@ -23,5 +23,11 @@ namespace RapiChicken.Models
 
         [Required(ErrorMessage = "El campo detalle de unidad es obligatorio")]
         public string DetalleUnidad { get; set; } = null!;
+		
+		[Required(ErrorMessage = "El campo cantidad de pedido es obligatorio")]
+        public int C { get; set; }
+
+        [Required(ErrorMessage = "El campo nombre de cliente es obligatorio")]
+        public string NPC { get; set; } = null!;
     }
 }

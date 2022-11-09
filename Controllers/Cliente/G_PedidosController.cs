@@ -8,6 +8,7 @@ namespace RapiChicken.Controllers.Cliente
     {
         CatalogoDatos _CatalogoDatos = new CatalogoDatos();
         PromocionesDatos _PromocionesDatos = new PromocionesDatos();
+		PedidosDatos _PedidosDatos = new PedidosDatos();
         public IActionResult Listar_Catalogo()
         {
             var oLista = _CatalogoDatos.Listar();
@@ -45,7 +46,7 @@ namespace RapiChicken.Controllers.Cliente
             if (!ModelState.IsValid)
                 return View();
 
-            var up = _CatalogoDatos.Editar(oI_ID);
+            var up = _PedidosDatos.EditarP(oI_ID);
 
             if (up)
                 return RedirectToAction("Listar_Catalogo");
