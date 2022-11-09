@@ -399,6 +399,7 @@ end
 go
 
 create procedure sp_GuardarPedido(
+@CID int,
 @NP varchar(250),
 @DP varchar(500),
 @C int,
@@ -411,6 +412,9 @@ begin
 end
 begin
 	update Inventario set stock=stock-@C where n_producto='pollo' and estado_producto='Cooler'
+end
+begin
+	update Catalogo set stock=stock-@C where Catalogo_id=@CID
 end
 go
 /*
