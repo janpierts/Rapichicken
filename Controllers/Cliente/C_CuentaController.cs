@@ -15,23 +15,24 @@ using Twilio.AspNet.Mvc;
 
 namespace RapiChicken.Controllers
 {
-    public class G_PersonalController : Controller
+    public class C_CuentaController : Controller
     {
         PersonalDatos _PersonalDatos = new PersonalDatos();
+        CuentaDatos _CuentaDatos = new CuentaDatos();
         public IActionResult Listar_Personal()
         {
             var oLista = _PersonalDatos.Listar();
             return View(oLista);
         }
-        public IActionResult FGuardar_Personal()
+        public IActionResult FGuardar_Cuenta()
         {
 			var oRoles = _PersonalDatos.ListarR();
             return View();
         }
         [HttpPost]
-        public IActionResult FGuardar_Personal(PersonalModel oGuardarP)
+        public IActionResult FGuardar_Cuenta(CuentaModel oGuardarP)
         {
-            var save = _PersonalDatos.Guardar(oGuardarP);
+            var save = _CuentaDatos.Guardar(oGuardarP);
             if (save)
                 return RedirectToAction("Listar_Personal");
             else

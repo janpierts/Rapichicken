@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/RapiChicken.csproj": {}
+    "D:\\tp\\RapiChicken\\RapiChicken.csproj": {}
   },
   "projects": {
-    "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/RapiChicken.csproj": {
+    "D:\\tp\\RapiChicken\\RapiChicken.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/RapiChicken.csproj",
+        "projectUniqueName": "D:\\tp\\RapiChicken\\RapiChicken.csproj",
         "projectName": "RapiChicken",
-        "projectPath": "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/RapiChicken.csproj",
-        "packagesPath": "/home/rjfrdvlpr/.nuget/packages/",
-        "outputPath": "/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken/obj/",
+        "projectPath": "D:\\tp\\RapiChicken\\RapiChicken.csproj",
+        "packagesPath": "C:\\Users\\Juan Bonzano\\.nuget\\packages\\",
+        "outputPath": "D:\\tp\\RapiChicken\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/rjfrdvlpr/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Juan Bonzano\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -82,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

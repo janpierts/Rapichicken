@@ -1,0 +1,63 @@
+﻿@model CuentaModel
+@{
+    ViewData["Title"] = "FGuardar_Cuenta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <div class="card-header">
+    Crear Cuenta
+  </div>
+  <div class="card-body">
+        <form asp-action="FGuardar_Cuenta" asp-controller="C_Cuenta" method="post">
+       <div class="mb-3">
+            <label class="form-label">Nombres</label>
+                <input asp-for="NPersonal" type="text" class="form-control">
+                <span asp-validation-for="NPersonal" class="text-danger"></span>
+       </div>
+       <div class="mb-3">
+            <label class="form-label">Apellidos</label>
+                <input asp-for="APersonal" type="text" class="form-control">
+                <span asp-validation-for="APersonal" class="text-danger"></span>
+       </div>
+       <div class="mb-3">
+            <label class="form-label">Telefono/Celular</label>
+                <input asp-for="PTel" type="text" class="form-control">
+                <span asp-validation-for="PTel" class="text-danger"></span>
+       </div>
+       <div class="mb-3">
+            <label class="form-label">Fecha de nacimiento</label>
+                <input asp-for="FN" type="date" class="form-control">
+                <span asp-validation-for="FN" class="text-danger"></span>
+       </div>
+       <div class="mb-3">
+            <label class="form-label">DNI</label>
+                <input asp-for="Dni" type="text" class="form-control">
+                <span asp-validation-for="Dni" class="text-danger"></span>
+       </div>
+       <div class="mb-3">
+            <label class="form-label">Direccion</label>
+                <input asp-for="Dir" type="text" class="form-control">
+                <span asp-validation-for="Dir" class="text-danger"></span>
+       </div>
+       <div class="mb-3">
+            <label class="form-label">Sexo(f/m)</label>
+                <input asp-for="sex" type="text" class="form-control">
+                <span asp-validation-for="sex" class="text-danger"></span>
+       </div>
+       <div class="mb-3">
+			<label class="form-label">Usuario</label>
+                <input asp-for="NU" type="text" class="form-control">
+                <span asp-validation-for="NU" class="text-danger"></span>
+       </div>
+            <div class="mb-3">
+                <label class="form-label">PassWord</label>
+                <input asp-for="PU" type="password"  class="form-control">
+                <span asp-validation-for="PU" class="text-danger"></span>
+            </div>
+       <button type="submit" class="btn btn-primary">Guardar</button>
+       <a asp-action="Listar_Personal" asp-controller="G_Personal" class="btn btn-warning">Volver a la lista</a>
+    </form>
+  </div>
+</div>
+

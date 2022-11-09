@@ -118,6 +118,49 @@ CREATE TABLE [dbo].[Pedidos](
 ) ON [PRIMARY]
 GO
 
+/****** Object:  Table [dbo].[Catalogo]    Script Date: 5/10/2022 01:01:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+create TABLE [dbo].[Catalogo](
+	[Catalogo_id] [int] IDENTITY(1,1) NOT NULL,
+	[n_producto] [varchar](250) NOT NULL,
+	[descripcion] [varchar](500) NULL,
+	[tipo_producto] [varchar](50) NOT NULL,
+	[estado_producto] [varchar](50) NOT NULL,
+	[stock] [int] NOT NULL,
+	[detalle_unidad] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Catalogo] PRIMARY KEY CLUSTERED 
+(
+	[Catalogo_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Promociones]    Script Date: 5/10/2022 01:01:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+create TABLE [dbo].[Promociones](
+	[Promociones_id] [int] IDENTITY(1,1) NOT NULL,
+	[n_producto] [varchar](250) NOT NULL,
+	[descripcion] [varchar](500) NULL,
+	[tipo_producto] [varchar](50) NOT NULL,
+	[estado_producto] [varchar](50) NOT NULL,
+	[stock] [int] NOT NULL,
+	[detalle_unidad] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Promociones] PRIMARY KEY CLUSTERED 
+(
+	[Promociones_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
 
 
 /****sp****/
@@ -318,3 +361,39 @@ declare @U_id int
 	end
 end
 go
+
+create procedure sp_ListarCatalogo
+as
+begin
+	select * from Catalogo
+end
+go
+
+use rapichicken
+go
+create procedure sp_ListarPromociones
+as
+begin
+	select * from Promociones
+end
+go
+
+create procedure sp_ObtenerIdCatalogo(
+@I_ID int
+)
+as
+begin
+	select * from Catalogo where @I_ID=Catalogo_id
+end
+go
+
+create procedure sp_EditarCatalogo(
+@I_ID int
+@Stock int
+)
+as
+begin
+	update Catalogo set stock = @Stock where Catalogo_id=@I_ID
+end
+go
+

@@ -6,12 +6,20 @@ namespace RapiChicken.Controllers.Cliente
 {
     public class G_PedidosController : Controller
     {
-        InventarioDatos _InventarioDatos = new InventarioDatos();
+        CatalogoDatos _CatalogoDatos = new CatalogoDatos();
+        PromocionesDatos _PromocionesDatos = new PromocionesDatos();
         public IActionResult Listar_Catalogo()
         {
-            var oLista = _InventarioDatos.Listar();
+            var oLista = _CatalogoDatos.Listar();
             return View(oLista);
         }
+        
+        public IActionResult Listar_Promociones()
+        {
+            var oLista = _PromocionesDatos.Listar();
+            return View(oLista);
+        }
+        /*
         public IActionResult FGuardar_Inventario()
         {
             return View();
@@ -24,27 +32,27 @@ namespace RapiChicken.Controllers.Cliente
                 return RedirectToAction("Listar_Catalogo");
             else
                 return View();
-        }
+        }*/
         public IActionResult FEditar_Pedido(int I_ID)
         {
-            var oID_Inventario = _InventarioDatos.ObtenerId(I_ID);
+            var oID_Inventario = _CatalogoDatos.ObtenerId(I_ID);
             return View(oID_Inventario);
         }
 
         [HttpPost]
-        public IActionResult FEditar_Pedido(InventarioModel oI_ID)
+        public IActionResult FEditar_Pedido(CatalogoModel oI_ID)
         {
             if (!ModelState.IsValid)
                 return View();
 
-            var up = _InventarioDatos.Editar(oI_ID);
+            var up = _CatalogoDatos.Editar(oI_ID);
 
             if (up)
                 return RedirectToAction("Listar_Catalogo");
             else
                 return View();
         }
-
+        /*
         public IActionResult Eliminar_PInventario(int I_ID)
         {
             //METODO SOLO DEVUELVE LA VISTA
@@ -62,6 +70,6 @@ namespace RapiChicken.Controllers.Cliente
                 return RedirectToAction("Listar_Catalogo");
             else
                 return View();
-        }
+        }*/
     }
 }

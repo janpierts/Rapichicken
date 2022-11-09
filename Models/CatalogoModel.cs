@@ -4,7 +4,9 @@ namespace RapiChicken.Models
 {
     public class CatalogoModel
     {
-        public int InventarioId { get; set; }
+
+
+        public int CatalogoId { get; set; }
 
         [Required(ErrorMessage ="El campo nombre de producto es obligatorio")]
         public string NProducto { get; set; } = null!;
