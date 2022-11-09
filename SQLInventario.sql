@@ -23,6 +23,25 @@ create TABLE [dbo].[Inventario](
 ) ON [PRIMARY]
 GO
 
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 5/10/2022 01:01:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+create TABLE [dbo].[Usuarios](
+	[Usuarios_id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](250) NOT NULL,
+	[pass] [varchar](500) NOT NULL,
+ CONSTRAINT [PK_Usuarios] PRIMARY KEY CLUSTERED 
+(
+	[Usuarios_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
 /****** Object:  Table [dbo].[Personas]    Script Date: 5/10/2022 01:01:48 ******/
 SET ANSI_NULLS ON
 GO
@@ -43,24 +62,6 @@ create TABLE [dbo].[Personas](
  CONSTRAINT [PK_Personas] PRIMARY KEY CLUSTERED 
 (
 	[Personas_id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-
-/****** Object:  Table [dbo].[Usuarios]    Script Date: 5/10/2022 01:01:48 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-create TABLE [dbo].[Usuarios](
-	[Usuarios_id] [int] IDENTITY(1,1) NOT NULL,
-	[name] [varchar](250) NOT NULL,
-	[pass] [varchar](500) NOT NULL,
- CONSTRAINT [PK_Usuarios] PRIMARY KEY CLUSTERED 
-(
-	[Usuarios_id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -388,7 +389,7 @@ end
 go
 
 create procedure sp_EditarCatalogo(
-@I_ID int
+@I_ID int,
 @Stock int
 )
 as
@@ -397,3 +398,6 @@ begin
 end
 go
 
+insert into Roles(name,description) 
+values ('Cliente','Puede generar carrito de compras')
+go
