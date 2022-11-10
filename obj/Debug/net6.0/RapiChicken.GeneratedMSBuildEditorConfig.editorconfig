@@ -15,12 +15,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = /home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C#.Net/MVC/RapiChicken
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/C_Cuenta/Eliminar_Personal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ19DdWVudGEvRWxpbWluYXJfUGVyc29uYWwuY3NodG1s
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/C_Cuenta/Eliminar_Cuenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ19DdWVudGEvRWxpbWluYXJfQ3VlbnRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/C_Cuenta/FEditar_Personal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ19DdWVudGEvRkVkaXRhcl9QZXJzb25hbC5jc2h0bWw=
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/C_Cuenta/FEditar_Cuenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ19DdWVudGEvRkVkaXRhcl9DdWVudGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/C_Cuenta/FGuardar_Cuenta.cshtml]

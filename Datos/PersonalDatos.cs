@@ -64,24 +64,29 @@ namespace RapiChicken.Datos
             return oRoles;
         }
         
-        public PersonalModel ObtenerRId(int ID)
+        public PersonalModel ObtenerPId(int ID)
         {
             var oI_ID = new PersonalModel();
             var cn = new Conexion();
             using (var con = new SqlConnection(cn.getconexion()))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("sp_ObtenerIdRoles", con);
-                cmd.Parameters.AddWithValue("R_ID",ID);
+                SqlCommand cmd = new SqlCommand("sp_ObtenerIdPersonal", con);
+                cmd.Parameters.AddWithValue("P_ID",ID);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using(var dr = cmd.ExecuteReader())
                 {
                     while (dr.Read())
                     {
-                        oI_ID.RolesId = Convert.ToInt32(dr["Roles_id"]);
-                        oI_ID.NRoles = dr["name"].ToString();
-                        oI_ID.Descripcion = dr["description"].ToString();
+                        oI_ID.PersonalId = Convert.ToInt32(dr["Personas_id"]);
+                        oI_ID.NPersonal = dr["nombres"].ToString();
+                        oI_ID.APersonal = dr["apellidos"].ToString();
+						oI_ID.PTel = Convert.ToInt32(dr["telefono"]);
+						oI_ID.FN = Convert.ToDateTime(dr["f_nacimiento"]);
+						oI_ID.Dni = Convert.ToInt32(dr["dni"]);
+						oI_ID.Dir = dr["direccion"].ToString();
+// 						oI_ID.sex = Convert.ToChar(dr["sexo"]);
                     }
                 }
             }
@@ -144,7 +149,7 @@ namespace RapiChicken.Datos
             return rpta;
         }
 
-        public bool Editar(RolesModel oEditarI)
+        public bool Editar(PersonalModel oEditarI)
         {
             bool rpta;
 
@@ -154,10 +159,16 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_EditarRoles", con);
-                    cmd.Parameters.AddWithValue("R_Id", oEditarI.RolId);
-                    cmd.Parameters.AddWithValue("NR", oEditarI.NRol);
-                    cmd.Parameters.AddWithValue("D", oEditarI.Descripcion);
+                    SqlCommand cmd = new SqlCommand("sp_EditarPersonales", con);
+                    cmd.Parameters.AddWithValue("P_Id", oEditarI.PersonalId);
+                    cmd.Parameters.AddWithValue("NP", oEditarI.NPersonal);
+                    cmd.Parameters.AddWithValue("AP", oEditarI.APersonal);
+					cmd.Parameters.AddWithValue("T", oEditarI.PTel);
+					cmd.Parameters.AddWithValue("F_N", oEditarI.FN);
+					cmd.Parameters.AddWithValue("Dni", oEditarI.Dni);
+					cmd.Parameters.AddWithValue("D", oEditarI.Dir);
+					cmd.Parameters.AddWithValue("S", oEditarI.sex);
+					cmd.Parameters.AddWithValue("R_id", oEditarI.RolesId);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }
@@ -181,8 +192,8 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_EliminarRoles", con);
-                    cmd.Parameters.AddWithValue("R_Id", ID);
+                    SqlCommand cmd = new SqlCommand("sp_EliminarPersonal", con);
+                    cmd.Parameters.AddWithValue("P_Id", ID);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }

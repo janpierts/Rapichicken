@@ -1,47 +1,68 @@
-﻿@model InventarioModel
+﻿@model PersonalModel
 @{
-    ViewData["Title"] = "FEditar_Inventario";
+    ViewData["Title"] = "FEditar_Personal";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="card">
     <div class="card-header">
-        Editar Producto
+        Editar Personal
     </div>
     <div class="card-body">
-        <form asp-action="FEditar_Inventario" asp-controller="G_Inventario" method="post">
-            <input asp-for="InventarioId" type="hidden" class="form-control">
-            <div class="mb-3">
-                <label class="form-label">Nombre de Producto</label>
-                <input asp-for="NProducto" type="text" class="form-control">
-                <span asp-validation-for="NProducto" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Descripcion del producto</label>
-                <input asp-for="Descripcion" type="text" class="form-control">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Tipo de producto</label>
-                <input asp-for="TipoProducto" type="text" class="form-control">
-                <span asp-validation-for="TipoProducto" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Estado de Producto</label>
-                <input asp-for="EstadoProducto" type="text" class="form-control">
-                <span asp-validation-for="EstadoProducto" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Stock</label>
-                <input asp-for="Stock" type="number" class="form-control" readonly>
-                <span asp-validation-for="Stock" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Detalle de Unidad del producto</label>
-                <input asp-for="DetalleUnidad" type="text" class="form-control">
-                <span asp-validation-for="DetalleUnidad" class="text-danger"></span>
-            </div>
+        <form asp-action="FEditar_Personal" asp-controller="G_Personal" method="post">
+            <input asp-for="PersonalId" type="hidden" class="form-control">
+			<div class="mb-3">
+				<label class="form-label">Nombres</label>
+                <input asp-for="NPersonal" type="text" class="form-control">
+                <span asp-validation-for="NPersonal" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Apellidos</label>
+                <input asp-for="APersonal" type="text" class="form-control">
+                <span asp-validation-for="APersonal" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Telefono/Celular</label>
+                <input asp-for="PTel" type="text" class="form-control">
+                <span asp-validation-for="PTel" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Fecha de nacimiento</label>
+                <input asp-for="FN" type="date" class="form-control">
+                <span asp-validation-for="FN" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label class="form-label">DNI</label>
+                <input asp-for="Dni" type="text" class="form-control">
+                <span asp-validation-for="Dni" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Direccion</label>
+                <input asp-for="Dir" type="text" class="form-control">
+                <span asp-validation-for="Dir" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Sexo(f/m)</label>
+				<select asp-for="sex" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+					<option selected>Seleccionar sexo</option>
+					<option value="f">Femenino</option>
+					<option value="m">Masculino</option>
+				</select>
+                <span asp-validation-for="sex" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Rol</label>
+				<select asp-for="RolesId" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+					<option selected>Seleccionar Rol</option>
+					<option value="3">Gerente</option>
+					<option value="4">Recepcionista</option>
+					<option value="5">Despachador</option>
+					<option value="6">Delivery</option>
+				</select>
+                <span asp-validation-for="RolesId" class="text-danger"></span>
+			</div>
             <button type="submit" class="btn btn-primary">Actualizar</button>
-            <a asp-action="Listar_Inventario" asp-controller="G_Inventario" class="btn btn-warning">Volver a la lista</a>
+            <a asp-action="Listar_Personal" asp-controller="G_Personal" class="btn btn-warning">Volver a la lista</a>
         </form>
     </div>
 </div>

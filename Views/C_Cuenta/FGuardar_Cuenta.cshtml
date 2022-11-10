@@ -42,7 +42,11 @@
        </div>
        <div class="mb-3">
             <label class="form-label">Sexo(f/m)</label>
-                <input asp-for="sex" type="text" class="form-control">
+				<select asp-for="sex" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+					<option selected>Seleccionar sexo</option>
+					<option value="f">Femenino</option>
+					<option value="m">Masculino</option>
+				</select>
                 <span asp-validation-for="sex" class="text-danger"></span>
        </div>
        <div class="mb-3">
@@ -55,8 +59,8 @@
                 <input asp-for="PU" type="password"  class="form-control">
                 <span asp-validation-for="PU" class="text-danger"></span>
             </div>
-       <button type="submit" class="btn btn-primary">Guardar</button>
-       <a asp-action="Listar_Personal" asp-controller="G_Personal" class="btn btn-warning">Volver a la lista</a>
+       <button type="submit" class="btn btn-primary">Registrar</button>
+       <a asp-action="Listar_Catalogo" asp-controller="G_Pedidos" class="btn btn-warning">Volver al catalogo</a>
     </form>
   </div>
 </div>

@@ -25,9 +25,11 @@ namespace RapiChicken.Models
         public string DetalleUnidad { get; set; } = null!;
 		
 		[Required(ErrorMessage = "El campo cantidad de pedido es obligatorio")]
+		[RegularExpression(@"^[0-9]+$", ErrorMessage = "Solo numeros")]
         public int C { get; set; }
 
         [Required(ErrorMessage = "El campo nombre de cliente es obligatorio")]
+        [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "Solo letras")]
         public string NPC { get; set; } = null!;
     }
 }

@@ -323,6 +323,47 @@ declare @P_id int
 end
 go
 
+create procedure sp_ObtenerIdPersonal(
+@P_ID int
+)
+as
+begin
+	select * from Personas where @P_ID=Personas_id
+end
+go
+
+create procedure sp_EditarPersonal(
+@P_Id int,
+@NP varchar(250),
+@AP varchar(250),
+@T int,
+@F_N date,
+@Dni int,
+@D varchar(500),
+@S char,
+@R_id int
+)
+as
+begin
+	update Personas set nombres = @NP,apellidos = @AP,telefono = @T,f_nacimiento = @F_N,dni = @Dni,direccion = @D, sexo = @S
+	where Personas_id = @P_id
+end
+begin
+	update Personas_has_Roles set Roles_id = @R_id where Personas_id = @P_Id
+end
+go
+
+create procedure sp_EliminarPersonal(@P_Id int)
+as
+begin
+	delete from Personas_has_Roles where Personas_id=@P_Id
+end
+begin
+	delete from Personas where Personas_id=@P_Id
+end
+go
+
+
 create procedure sp_GuardarCliente(
 @NP varchar(250),
 @AP varchar(250),
@@ -422,4 +463,19 @@ Scripts data fija
 */
 insert into Roles(name,description) 
 values ('Cliente','Puede generar carrito de compras')
+go
+insert into Roles(name,description) 
+values ('Invitado','Puede generar carrito de compras')
+go
+insert into Roles(name,description) 
+values ('Gerente','Puede gestionar el negocio usando el sistema')
+go
+insert into Roles(name,description) 
+values ('Recepcionista','Puede gestionar el pedido del cliente con el sistema')
+go
+insert into Roles(name,description) 
+values ('Despachador','Puede validar el pedido del cliente con el sistema')
+go
+insert into Roles(name,description) 
+values ('Delivery','Puede validar y hacer entrega del pedido del cliente usando el sistema')
 go

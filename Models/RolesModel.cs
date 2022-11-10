@@ -4,6 +4,7 @@ namespace RapiChicken.Models
 {
     public class RolesModel
     {
+		[Required(ErrorMessage ="El campo nombre del rol es obligatorio")]
         public int RolId { get; set; }
 
         [Required(ErrorMessage ="El campo nombre del rol es obligatorio")]

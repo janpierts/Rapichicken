@@ -37,44 +37,44 @@ namespace RapiChicken.Controllers
             else
                 return View();
         }
-        /*public IActionResult FEditar_Roles(int I_ID)
+        public IActionResult FEditar_Personal(int I_ID)
         {
-            var oID_Roles = _RolesDatos.ObtenerId(I_ID);
+            var oID_Roles = _PersonalDatos.ObtenerPId(I_ID);
             return View(oID_Roles);
         }
 
         [HttpPost]
-        public IActionResult FEditar_Roles(RolesModel oI_ID)
+        public IActionResult FEditar_Personal(PersonalModel oI_ID)
         {
             if (!ModelState.IsValid)
                 return View();
 
-            var up = _RolesDatos.Editar(oI_ID);
+            var up = _PersonalDatos.Editar(oI_ID);
 
             if (up)
-                return RedirectToAction("Listar_Roles");
+                return RedirectToAction("Listar_Personal");
             else
                 return View();
         }
         
-        public IActionResult Eliminar_Roles(int I_ID)
+        public IActionResult Eliminar_Personal(int I_ID)
         {
             //METODO SOLO DEVUELVE LA VISTA
-            var oDI = _RolesDatos.ObtenerId(I_ID);
+            var oDI = _PersonalDatos.ObtenerPId(I_ID);
             return View(oDI);
         }
 
         [HttpPost]
-        public IActionResult Eliminar_Roles(RolesModel odi)
+        public IActionResult Eliminar_Personal(PersonalModel odi)
         {
 
-            var down = _RolesDatos.Eliminar(odi.RolId);
+            var down = _PersonalDatos.Eliminar(odi.PersonalId);
 
             if (down)
-                return RedirectToAction("Listar_Roles");
+                return RedirectToAction("Listar_Personal");
             else
                 return View();
-        }*/
+        }
     }
 }
  
