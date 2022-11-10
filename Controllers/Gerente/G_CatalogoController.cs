@@ -19,7 +19,7 @@ namespace RapiChicken.Controllers
     {
         InventarioDatos _InventarioDatos = new InventarioDatos();
 		CatalogoDatos _CatalogoDatos = new CatalogoDatos();
-        public IActionResult Listar_Catalogo()
+        public IActionResult Listar_GCatalogo()
         {
             var oLista = _CatalogoDatos.Listar();
             return View(oLista);

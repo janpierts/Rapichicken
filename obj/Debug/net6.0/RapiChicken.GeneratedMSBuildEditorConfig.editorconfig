@@ -51,8 +51,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19DYXRhbG9nby9GR3VhcmRhcl9DYXRhbG9nby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Catalogo/Listar_Catalogo.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19DYXRhbG9nby9MaXN0YXJfQ2F0YWxvZ28uY3NodG1s
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Catalogo/Listar_GCatalogo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19DYXRhbG9nby9MaXN0YXJfR0NhdGFsb2dvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Inventario/Editar_SInventario.cshtml]

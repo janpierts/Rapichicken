@@ -1,6 +1,6 @@
 ﻿@model List<CatalogoModel>
 @{
-    ViewData["Title"] = "Listar_Inventario";
+    ViewData["Title"] = "Listar_GCatalogo";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -9,7 +9,7 @@
     Gestionar Catalogo
   </div>
   <div class="card-body">
-    <a asp-action="FGuardar_Inventario" asp-controller="G_Inventario" class="btn btn-success"><i class="bi bi-plus-circle"></i> Crear Nuevo</a>
+    <a asp-action="FGuardar_Inventario" asp-controller="G_Catalogo" class="btn btn-success"><i class="bi bi-plus-circle"></i> Crear Nuevo</a>
     <hr />
     <table class="table table-dark table-striped">
         <thead>
@@ -28,7 +28,7 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>@item.InventarioId</td>
+                        <td>@item.CatalogoId</td>
                         <td>@item.NProducto</td>
                         <td>@item.Descripcion</td>
                         <td>@item.TipoProducto</td>
@@ -36,9 +36,9 @@
                         <td>@item.Stock</td>
                         <td>@item.DetalleUnidad</td>
                         <td>
-                            <a asp-action="FEditar_Inventario" asp-controller="G_Inventario" class="btn btn-primary btn-sm" asp-route-I_ID="@item.InventarioId">Editar</a>
-                            <a asp-action="Editar_SInventario" asp-controller="G_Inventario" class="btn btn-warning btn-sm" asp-route-I_ID="@item.InventarioId">Stock</a>
-                            <a asp-action="Eliminar_PInventario" asp-controller="G_Inventario" class="btn btn-danger btn-sm" asp-route-I_ID="@item.InventarioId">Eliminar</a>
+                            <a asp-action="FEditar_Inventario" asp-controller="G_Inventario" class="btn btn-primary btn-sm" asp-route-I_ID="@item.CatalogoId">Editar</a>
+                            <a asp-action="Editar_SInventario" asp-controller="G_Inventario" class="btn btn-warning btn-sm" asp-route-I_ID="@item.CatalogoId">Stock</a>
+                            <a asp-action="Eliminar_PInventario" asp-controller="G_Inventario" class="btn btn-danger btn-sm" asp-route-I_ID="@item.CatalogoId">Eliminar</a>
                         </td>
                     </tr>
 
