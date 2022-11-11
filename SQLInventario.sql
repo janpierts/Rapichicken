@@ -567,3 +567,8 @@ go
 insert into Roles(name,description) 
 values ('Delivery','Puede validar y hacer entrega del pedido del cliente usando el sistema')
 go
+
+insert into Inventario(n_producto, descripcion,tipo_producto,estado_producto,stock,detalle_unidad)
+values('pollo','listo para pedidos','comestible','Cooler','100','unidad')
+insert into Inventario(n_producto, descripcion,tipo_producto,estado_producto,stock,detalle_unidad)
+values('pollo','almacenado','comestible','Almacen','100','unidad')
