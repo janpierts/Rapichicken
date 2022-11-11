@@ -93,7 +93,7 @@ namespace RapiChicken.Datos
             return oListaN;
         }
 
-        public bool Guardar(InventarioModel oGuardarI)
+        public bool Guardar(CatalogoModel oGuardarI)
         {
             bool rpta;
 
@@ -103,7 +103,7 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_GuardarInventario", con);
+                    SqlCommand cmd = new SqlCommand("sp_GuardarCatalogo", con);
                     cmd.Parameters.AddWithValue("NombreP", oGuardarI.NProducto);
                     cmd.Parameters.AddWithValue("I_D", oGuardarI.Descripcion);
                     cmd.Parameters.AddWithValue("T_P", oGuardarI.TipoProducto);
@@ -154,7 +154,7 @@ namespace RapiChicken.Datos
             return rpta;
         }
         
-        public bool EditarS(InventarioModel oEditarI)
+        public bool EditarS(CatalogoModel oEditarI)
         {
             bool rpta;
 
@@ -164,8 +164,8 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_EditarStock", con);
-                    cmd.Parameters.AddWithValue("I_Id", oEditarI.InventarioId);
+                    SqlCommand cmd = new SqlCommand("sp_EditarStockC", con);
+                    cmd.Parameters.AddWithValue("I_Id", oEditarI.CatalogoId);
                     cmd.Parameters.AddWithValue("I_Stock", oEditarI.Stock);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
@@ -190,7 +190,7 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_EliminarInventario", con);
+                    SqlCommand cmd = new SqlCommand("sp_EliminarCatalogo", con);
                     cmd.Parameters.AddWithValue("I_Id", I_ID);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();

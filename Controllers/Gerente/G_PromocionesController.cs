@@ -18,79 +18,80 @@ namespace RapiChicken.Controllers
     public class G_PromocionesController : Controller
     {
         InventarioDatos _InventarioDatos = new InventarioDatos();
-        public IActionResult Listar_Promociones()
+		PromocionesDatos _PromocionesDatos = new PromocionesDatos();
+        public IActionResult Listar_GPromociones()
         {
-            var oLista = _InventarioDatos.Listar();
+            var oLista = _PromocionesDatos.Listar();
             return View(oLista);
         }
-        public IActionResult FGuardar_Inventario()
+        public IActionResult FGuardar_Promociones()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult FGuardar_Inventario(InventarioModel oInventario)
+        public IActionResult FGuardar_Promociones(PromocionesModel oInventario)
         {
-            var save = _InventarioDatos.Guardar(oInventario);
+            var save = _PromocionesDatos.Guardar(oInventario);
             if (save)
-                return RedirectToAction("Listar_Inventario");
+                return RedirectToAction("Listar_GPromociones");
             else
                 return View();
         }
-        public IActionResult FEditar_Inventario(int I_ID)
+        public IActionResult FEditar_Promociones(int I_ID)
         {
-            var oID_Inventario = _InventarioDatos.ObtenerId(I_ID);
+            var oID_Inventario = _PromocionesDatos.ObtenerId(I_ID);
             return View(oID_Inventario);
         }
 
         [HttpPost]
-        public IActionResult FEditar_Inventario(InventarioModel oI_ID)
+        public IActionResult FEditar_Promociones(PromocionesModel oI_ID)
         {
             if (!ModelState.IsValid)
                 return View();
 
-            var up = _InventarioDatos.Editar(oI_ID);
+            var up = _PromocionesDatos.Editar(oI_ID);
 
             if (up)
-                return RedirectToAction("Listar_Inventario");
+                return RedirectToAction("Listar_GPromociones");
             else
                 return View();
         }
         
-        public IActionResult Editar_SInventario(int I_ID)
+        public IActionResult Editar_SPromociones(int I_ID)
         {
-            var oID_Inventario = _InventarioDatos.ObtenerId(I_ID);
+            var oID_Inventario = _PromocionesDatos.ObtenerId(I_ID);
             return View(oID_Inventario);
         }
 
         [HttpPost]
-        public IActionResult Editar_SInventario(InventarioModel oI_ID)
+        public IActionResult Editar_SPromociones(PromocionesModel oI_ID)
         {
             if (!ModelState.IsValid)
                 return View();
 
-            var up = _InventarioDatos.EditarS(oI_ID);
+            var up = _PromocionesDatos.EditarS(oI_ID);
 
             if (up)
-                return RedirectToAction("Listar_Inventario");
+                return RedirectToAction("Listar_GPromociones");
             else
                 return View();
         }
 
-        public IActionResult Eliminar_PInventario(int I_ID)
+        public IActionResult Eliminar_Promociones(int I_ID)
         {
             //METODO SOLO DEVUELVE LA VISTA
-            var oDI = _InventarioDatos.ObtenerId(I_ID);
+            var oDI = _PromocionesDatos.ObtenerId(I_ID);
             return View(oDI);
         }
 
         [HttpPost]
-        public IActionResult Eliminar_PInventario(InventarioModel odi)
+        public IActionResult Eliminar_Promociones(PromocionesModel odi)
         {
 
-            var down = _InventarioDatos.Eliminar(odi.InventarioId);
+            var down = _PromocionesDatos.Eliminar(odi.PromocionesId);
 
             if (down)
-                return RedirectToAction("Listar_Inventario");
+                return RedirectToAction("Listar_GPromociones");
             else
                 return View();
         }

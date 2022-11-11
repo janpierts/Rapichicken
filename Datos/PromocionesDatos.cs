@@ -35,14 +35,14 @@ namespace RapiChicken.Datos
             }
             return oLista;
         }
-        public InventarioModel ObtenerId(int I_ID)
+        public PromocionesModel ObtenerId(int I_ID)
         {
-            var oI_ID = new InventarioModel();
+            var oI_ID = new PromocionesModel();
             var cn = new Conexion();
             using (var con = new SqlConnection(cn.getconexion()))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("sp_ObtenerIdInventario", con);
+                SqlCommand cmd = new SqlCommand("sp_ObtenerIdPromociones", con);
                 cmd.Parameters.AddWithValue("I_ID",I_ID);
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -50,7 +50,7 @@ namespace RapiChicken.Datos
                 {
                     while (dr.Read())
                     {
-                        oI_ID.InventarioId = Convert.ToInt32(dr["Inventario_id"]);
+                        oI_ID.PromocionesId = Convert.ToInt32(dr["Promociones_id"]);
                         oI_ID.NProducto = dr["n_producto"].ToString();
                         oI_ID.Descripcion = dr["descripcion"].ToString();
                         oI_ID.TipoProducto = dr["tipo_producto"].ToString();
@@ -93,7 +93,7 @@ namespace RapiChicken.Datos
             return oListaN;
         }
 
-        public bool Guardar(InventarioModel oGuardarI)
+        public bool Guardar(PromocionesModel oGuardarI)
         {
             bool rpta;
 
@@ -123,7 +123,7 @@ namespace RapiChicken.Datos
             return rpta;
         }
 
-        public bool Editar(InventarioModel oEditarI)
+        public bool Editar(PromocionesModel oEditarI)
         {
             bool rpta;
 
@@ -133,8 +133,8 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_EditarInventario", con);
-                    cmd.Parameters.AddWithValue("I_Id", oEditarI.InventarioId);
+                    SqlCommand cmd = new SqlCommand("sp_EditarPromociones", con);
+                    cmd.Parameters.AddWithValue("I_Id", oEditarI.PromocionesId);
                     cmd.Parameters.AddWithValue("NombreP", oEditarI.NProducto);
                     cmd.Parameters.AddWithValue("I_D", oEditarI.Descripcion);
                     cmd.Parameters.AddWithValue("T_P", oEditarI.TipoProducto);
@@ -154,7 +154,7 @@ namespace RapiChicken.Datos
             return rpta;
         }
         
-        public bool EditarS(InventarioModel oEditarI)
+        public bool EditarS(PromocionesModel oEditarI)
         {
             bool rpta;
 
@@ -164,8 +164,8 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_EditarStock", con);
-                    cmd.Parameters.AddWithValue("I_Id", oEditarI.InventarioId);
+                    SqlCommand cmd = new SqlCommand("sp_EditarStockP", con);
+                    cmd.Parameters.AddWithValue("I_Id", oEditarI.PromocionesId);
                     cmd.Parameters.AddWithValue("I_Stock", oEditarI.Stock);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
@@ -190,7 +190,7 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_EliminarInventario", con);
+                    SqlCommand cmd = new SqlCommand("sp_EliminarPromociones", con);
                     cmd.Parameters.AddWithValue("I_Id", I_ID);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();

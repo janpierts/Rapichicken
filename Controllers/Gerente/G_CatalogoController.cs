@@ -24,74 +24,74 @@ namespace RapiChicken.Controllers
             var oLista = _CatalogoDatos.Listar();
             return View(oLista);
         }
-        public IActionResult FGuardar_Inventario()
+        public IActionResult FGuardar_Catalogo()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult FGuardar_Inventario(InventarioModel oInventario)
+        public IActionResult FGuardar_Catalogo(CatalogoModel oInventario)
         {
-            var save = _InventarioDatos.Guardar(oInventario);
+            var save = _CatalogoDatos.Guardar(oInventario);
             if (save)
-                return RedirectToAction("Listar_Inventario");
+                return RedirectToAction("Listar_GCatalogo");
             else
                 return View();
         }
-        public IActionResult FEditar_Inventario(int I_ID)
+        public IActionResult FEditar_Catalogo(int I_ID)
         {
-            var oID_Inventario = _InventarioDatos.ObtenerId(I_ID);
+            var oID_Inventario = _CatalogoDatos.ObtenerId(I_ID);
             return View(oID_Inventario);
         }
 
         [HttpPost]
-        public IActionResult FEditar_Inventario(InventarioModel oI_ID)
+        public IActionResult FEditar_Catalogo(CatalogoModel oI_ID)
         {
             if (!ModelState.IsValid)
                 return View();
 
-            var up = _InventarioDatos.Editar(oI_ID);
+            var up = _CatalogoDatos.Editar(oI_ID);
 
             if (up)
-                return RedirectToAction("Listar_Inventario");
+                return RedirectToAction("Listar_GCatalogo");
             else
                 return View();
         }
         
-        public IActionResult Editar_SInventario(int I_ID)
+        public IActionResult Editar_SCatalogo(int I_ID)
         {
-            var oID_Inventario = _InventarioDatos.ObtenerId(I_ID);
+            var oID_Inventario = _CatalogoDatos.ObtenerId(I_ID);
             return View(oID_Inventario);
         }
 
         [HttpPost]
-        public IActionResult Editar_SInventario(InventarioModel oI_ID)
+        public IActionResult Editar_SCatalogo(CatalogoModel oI_ID)
         {
             if (!ModelState.IsValid)
                 return View();
 
-            var up = _InventarioDatos.EditarS(oI_ID);
+            var up = _CatalogoDatos.EditarS(oI_ID);
 
             if (up)
-                return RedirectToAction("Listar_Inventario");
+                return RedirectToAction("Listar_GCatalogo");
             else
                 return View();
         }
 
-        public IActionResult Eliminar_PInventario(int I_ID)
+        public IActionResult Eliminar_Catalogo(int I_ID)
         {
             //METODO SOLO DEVUELVE LA VISTA
-            var oDI = _InventarioDatos.ObtenerId(I_ID);
+            var oDI = _CatalogoDatos.ObtenerId(I_ID);
             return View(oDI);
         }
 
         [HttpPost]
-        public IActionResult Eliminar_PInventario(InventarioModel odi)
+        public IActionResult Eliminar_Catalogo(CatalogoModel odi)
         {
 
-            var down = _InventarioDatos.Eliminar(odi.InventarioId);
+            var down = _CatalogoDatos.Eliminar(odi.CatalogoId);
 
             if (down)
-                return RedirectToAction("Listar_Inventario");
+                return RedirectToAction("Listar_GCatalogo");
             else
                 return View();
         }

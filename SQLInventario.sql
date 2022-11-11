@@ -407,7 +407,7 @@ go
 create procedure sp_ListarCatalogo
 as
 begin
-	select * from Catalogo
+	select * from Catalogo where stock > 0
 end
 go
 
@@ -416,7 +416,7 @@ go
 create procedure sp_ListarPromociones
 as
 begin
-	select * from Promociones
+	select * from Promociones where stock > 0
 end
 go
 
@@ -426,6 +426,15 @@ create procedure sp_ObtenerIdCatalogo(
 as
 begin
 	select * from Catalogo where @I_ID=Catalogo_id
+end
+go
+
+create procedure sp_ObtenerIdPromociones(
+@I_ID int
+)
+as
+begin
+	select * from Promociones where @I_ID=Promociones_id
 end
 go
 
@@ -456,6 +465,85 @@ begin
 end
 begin
 	update Catalogo set stock=stock-@C where Catalogo_id=@CID
+end
+go
+
+
+create procedure sp_GuardarCatalogo(
+@NombreP varchar(250),
+@I_D varchar(500),
+@T_P varchar(50),
+@E_P varchar(50),
+@I_Stock int,
+@I_D_Unidad varchar(50)
+)
+as
+begin
+	insert into Promociones(n_producto,descripcion,tipo_producto,estado_producto,stock,detalle_unidad) 
+	values(@NombreP,@I_D,@T_P,@E_P,@I_Stock,@I_D_Unidad)
+end
+go
+
+
+create procedure sp_GuardarPromociones(
+@NombreP varchar(250),
+@I_D varchar(500),
+@T_P varchar(50),
+@E_P varchar(50),
+@I_Stock int,
+@I_D_Unidad varchar(50)
+)
+as
+begin
+	insert into Promociones(n_producto,descripcion,tipo_producto,estado_producto,stock,detalle_unidad) 
+	values(@NombreP,@I_D,@T_P,@E_P,@I_Stock,@I_D_Unidad)
+end
+go
+create procedure sp_EditarCatalogo(
+@I_Id int,
+@NombreP varchar(250),
+@I_D varchar(500),
+@T_P varchar(50),
+@E_P varchar(50),
+@I_Stock int,
+@I_D_Unidad varchar(50)
+)
+as
+begin
+	update Catalogo set n_producto = @NombreP,descripcion = @I_D,tipo_producto = @T_P,
+	estado_producto = @E_P,detalle_unidad = @I_D_Unidad 
+	where Catalogo_id = @I_Id
+end
+go
+
+create procedure sp_EditarPromociones(
+@I_Id int,
+@NombreP varchar(250),
+@I_D varchar(500),
+@T_P varchar(50),
+@E_P varchar(50),
+@I_Stock int,
+@I_D_Unidad varchar(50)
+)
+as
+begin
+	update Promociones set n_producto = @NombreP,descripcion = @I_D,tipo_producto = @T_P,
+	estado_producto = @E_P,detalle_unidad = @I_D_Unidad 
+	where Promociones_id = @I_Id
+end
+go
+
+create procedure sp_EliminarCatalogo(@I_Id int)
+as
+begin
+	delete from Catalogo where Catalogo_id = @I_Id
+end
+go
+
+create procedure sp_EliminarPromociones(@I_Id int)
+as
+begin
+	delete from Promociones where Promociones_id = @I_Id
 end
 go
 /*

@@ -1,6 +1,6 @@
-@model InventarioModel
+@model CatalogoModel
 @{
-    ViewData["Title"] = "Editar_SInventario";
+    ViewData["Title"] = "Editar_SCatalogo";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -9,8 +9,8 @@
         Editar Producto
     </div>
     <div class="card-body">
-        <form asp-action="Editar_SInventario" asp-controller="G_Inventario" method="post">
-            <input asp-for="InventarioId" type="hidden" class="form-control">
+        <form asp-action="Editar_SCatalogo" asp-controller="G_Catalogo" method="post">
+            <input asp-for="CatalogoId" type="hidden" class="form-control">
             <div class="mb-3">
                 <label class="form-label">Nombre de Producto</label>
                 <input asp-for="NProducto" type="text" class="form-control" readonly>
@@ -41,7 +41,7 @@
                 <span asp-validation-for="DetalleUnidad" class="text-danger"></span>
             </div>
             <button type="submit" class="btn btn-primary">Actualizar</button>
-            <a asp-action="Listar_Inventario" asp-controller="G_Inventario" class="btn btn-warning">Volver a la lista</a>
+            <a asp-action="Listar_GCatalogo" asp-controller="G_Catalogo" class="btn btn-warning">Volver a la lista</a>
         </form>
     </div>
 </div>
