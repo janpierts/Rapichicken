@@ -328,9 +328,13 @@ create procedure sp_ObtenerIdPersonal(
 )
 as
 begin
-	select * from Personas where @P_ID=Personas_id
+	select Personas.Personas_id as Personas_id,Personas.nombres as nombres,Personas.apellidos as apellidos,Personas.telefono as telefono ,Personas.f_nacimiento as f_nacimiento,Personas.dni as dni,Personas.direccion as direccion,Personas.sexo as sexo,Personas_has_Roles.Roles_id as Roles_id,Roles.name as name,Roles.description as description from Personas
+	join Personas_has_Roles on Personas.Personas_id=Personas_has_Roles.Personas_id
+	join Roles on Personas_has_Roles.Roles_id=Roles.Roles_id
+	where Personas.Personas_id = @P_ID
 end
 go
+
 
 create procedure sp_EditarPersonal(
 @P_Id int,
@@ -438,7 +442,18 @@ begin
 end
 go
 
-create procedure sp_EditarCatalogo(
+create procedure sp_EditarStockP(
+@I_Id int,
+@I_Stock int
+)
+as
+begin
+	update Promociones set stock = @I_Stock where Promociones_id = @I_Id
+end
+go
+
+
+create procedure sp_EditarStockC(
 @I_ID int,
 @Stock int
 )
@@ -479,7 +494,7 @@ create procedure sp_GuardarCatalogo(
 )
 as
 begin
-	insert into Promociones(n_producto,descripcion,tipo_producto,estado_producto,stock,detalle_unidad) 
+	insert into Catalogo(n_producto,descripcion,tipo_producto,estado_producto,stock,detalle_unidad) 
 	values(@NombreP,@I_D,@T_P,@E_P,@I_Stock,@I_D_Unidad)
 end
 go

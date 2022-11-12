@@ -61,6 +61,8 @@
 				</select>
                 <span asp-validation-for="RolesId" class="text-danger"></span>
 			</div>
+			<input asp-for="NRoles" type="hidden" class="form-control">
+			<input asp-for="Descripcion" type="hidden" class="form-control">
             <button type="submit" class="btn btn-primary">Actualizar</button>
             <a asp-action="Listar_Personal" asp-controller="G_Personal" class="btn btn-warning">Volver a la lista</a>
         </form>

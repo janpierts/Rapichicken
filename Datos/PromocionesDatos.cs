@@ -103,7 +103,7 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_GuardarInventario", con);
+                    SqlCommand cmd = new SqlCommand("sp_GuardarPromociones", con);
                     cmd.Parameters.AddWithValue("NombreP", oGuardarI.NProducto);
                     cmd.Parameters.AddWithValue("I_D", oGuardarI.Descripcion);
                     cmd.Parameters.AddWithValue("T_P", oGuardarI.TipoProducto);

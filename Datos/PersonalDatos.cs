@@ -86,7 +86,10 @@ namespace RapiChicken.Datos
 						oI_ID.FN = Convert.ToDateTime(dr["f_nacimiento"]);
 						oI_ID.Dni = Convert.ToInt32(dr["dni"]);
 						oI_ID.Dir = dr["direccion"].ToString();
-// 						oI_ID.sex = Convert.ToChar(dr["sexo"]);
+ 						oI_ID.sex = Convert.ToChar(dr["sexo"]);
+						oI_ID.RolesId = Convert.ToInt32(dr["Roles_id"]);
+						oI_ID.NRoles = dr["name"].ToString();
+						oI_ID.Descripcion = dr["description"].ToString();
                     }
                 }
             }
@@ -159,7 +162,7 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_EditarPersonales", con);
+                    SqlCommand cmd = new SqlCommand("sp_EditarPersonal", con);
                     cmd.Parameters.AddWithValue("P_Id", oEditarI.PersonalId);
                     cmd.Parameters.AddWithValue("NP", oEditarI.NPersonal);
                     cmd.Parameters.AddWithValue("AP", oEditarI.APersonal);

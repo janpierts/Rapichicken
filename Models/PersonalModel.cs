@@ -33,12 +33,12 @@ namespace RapiChicken.Models
 		[RegularExpression(@"^[m,fM,F]+$", ErrorMessage = "escriba f para femenino y m para masculino")]
 		public char sex { get; set; }
 		
+		[Required(ErrorMessage = "El campo Rol es obligatorio")]
 		public int RolesId { get; set; }
 		
-		[Required(ErrorMessage = "El campo rol es obligatorio")]
-		public string NRoles { get; set; } = null!;
+		public string NRoles { get; set; }
 		
-		public string Descripcion { get; set; } = null!;
+		public string Descripcion { get; set; }
     }
 }
 		
