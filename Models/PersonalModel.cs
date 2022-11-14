@@ -23,7 +23,7 @@ namespace RapiChicken.Models
         public DateTime FN { get; set; }
 		
 		[Required(ErrorMessage = "El campo DNI es obligatorio")]
-		[RegularExpression(@"^[0-9]+$", ErrorMessage = "DNI debe de tener solo numeros")]
+		[RegularExpression(@"^[0-9]{8}$", ErrorMessage = "DNI debe de tener solo(8) numeros")]
 		public int Dni { get; set; }
 
         [Required(ErrorMessage = "El campo direccion es obligatorio")]

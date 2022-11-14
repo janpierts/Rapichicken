@@ -13,6 +13,7 @@ namespace RapiChicken.Models
         public string D_Pedido { get; set; } = null!;
 
         [Required(ErrorMessage = "El campo stock de producto es obligatorio")]
+        [Range(1, int.MaxValue, ErrorMessage = "Solo numeros positivos")]
         public int Cantidad { get; set; }
 
         [Required(ErrorMessage = "El campo detalle de unidad es obligatorio")]

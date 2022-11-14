@@ -26,6 +26,7 @@ namespace RapiChicken.Models
 		
 		[Required(ErrorMessage = "El campo cantidad de pedido es obligatorio")]
 		[RegularExpression(@"^[0-9]+$", ErrorMessage = "Solo numeros")]
+		[Range(1, int.MaxValue, ErrorMessage = "Solo numeros positivos")]
         public int C { get; set; }
 
         [Required(ErrorMessage = "El campo nombre de cliente es obligatorio")]
