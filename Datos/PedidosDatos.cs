@@ -6,29 +6,27 @@ namespace RapiChicken.Datos
 {
     public class PedidosDatos
     {
-        public List<InventarioModel> Listar()
+        public List<PedidosModel> Listar()
         {
-            var oLista = new List<InventarioModel>();
+            var oLista = new List<PedidosModel>();
             var cn = new Conexion();
             using (var con = new SqlConnection(cn.getconexion()))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("sp_ListarInventario", con);
+                SqlCommand cmd = new SqlCommand("sp_ListarPedidos", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var dr = cmd.ExecuteReader())
                 {
                     while (dr.Read())
                     {
-                        oLista.Add(new InventarioModel()
+                        oLista.Add(new PedidosModel()
                         {
-                            InventarioId = Convert.ToInt32(dr["Inventario_id"]),
-                            NProducto = dr["n_producto"].ToString(),
-                            Descripcion = dr["descripcion"].ToString(),
-                            TipoProducto = dr["tipo_producto"].ToString(),
-                            EstadoProducto = dr["estado_producto"].ToString(),
-                            Stock = Convert.ToInt32(dr["stock"]),
-                            DetalleUnidad = dr["detalle_unidad"].ToString()
+                            Pedidos_id = Convert.ToInt32(dr["Pedidos_id"]),
+                            N_Pedido = dr["N_Pedido"].ToString(),
+                            D_Pedido = dr["D_Pedido"].ToString(),
+                            Cantidad = Convert.ToInt32(dr["Cantidad"]),
+                            NP_C = dr["NP_C"].ToString()
                         });
                     }
                 }

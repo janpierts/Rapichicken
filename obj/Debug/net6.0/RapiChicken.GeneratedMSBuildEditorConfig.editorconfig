@@ -79,6 +79,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19QZWRpZG9zL0ZFZGl0YXJfUGVkaWRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Pedidos/ListarPedidos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19QZWRpZG9zL0xpc3RhclBlZGlkb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/G_Pedidos/Listar_Catalogo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR19QZWRpZG9zL0xpc3Rhcl9DYXRhbG9nby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -171,8 +175,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vSW5pY2lhclNlc2lvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/Login/Test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vVGVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/Shared/_LayoutC.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXRDLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/rjfrdvlpr/frdvlpr/CODE/Proyectos/C\#.Net/MVC/RapiChicken/Views/Shared/_ValidationScriptsPartial.cshtml]

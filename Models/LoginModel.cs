@@ -4,10 +4,12 @@ namespace RapiChicken.Models
 {
 	public class LoginModel
 	{
-		[Required(ErrorMessage ="El campo nombres es obligatorio")]
-		public string User { get; set; } = null!;
+		[Required(ErrorMessage = "El campo Usuario es obligatorio")]
+        public string NU { get; set; } = null!;
+        
+		[Required(ErrorMessage = "El Password es obligatorio")]
+        public string PU { get; set; } = null!;
 		
-		[Required(ErrorMessage ="El campo nombres es obligatorio")]
-		public string Pass { get; set; } = null!;
+		public int RolesId { get; set; }
 	}
 }

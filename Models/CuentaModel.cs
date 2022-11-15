@@ -20,6 +20,7 @@ namespace RapiChicken.Models
         
         [Required(ErrorMessage ="El campo fecha de nacimiento es obligatorio")]
         [DataType(DataType.Date)]
+        [Range(typeof(DateTime),"1/1/1938","1/1/2005", ErrorMessage = "La fecha de nacimiento no permitidad, la fecha deben estar en el rango de 1/1/1938 y 1/1/2005 ")]
         public DateTime FN { get; set; }
 		
 		[Required(ErrorMessage = "El campo DNI es obligatorio")]

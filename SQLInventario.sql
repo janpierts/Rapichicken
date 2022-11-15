@@ -323,6 +323,20 @@ declare @P_id int
 end
 go
 
+create procedure sp_Login(
+@NP varchar(250),
+@AP varchar(250)
+)
+as
+begin
+	select Personas.Personas_id as Personas_id,Personas.nombres as nombres,Personas.apellidos as apellidos,Personas.telefono as telefono ,Personas.f_nacimiento as f_nacimiento,Personas.dni as dni,Personas.direccion as direccion,Personas.sexo as sexo,Personas_has_Roles.Roles_id as Roles_id,Roles.name as name,Roles.description as description from Personas
+	join Personas_has_Roles on Personas.Personas_id=Personas_has_Roles.Personas_id
+	join Roles on Personas_has_Roles.Roles_id=Roles.Roles_id
+	join Usuarios on Personas.FK_Usuarios=Usuarios.Usuarios_id
+	where Usuarios.name = @NP and Usuarios.pass = @AP
+end
+go
+
 create procedure sp_ObtenerIdPersonal(
 @P_ID int
 )
@@ -421,6 +435,13 @@ create procedure sp_ListarPromociones
 as
 begin
 	select * from Promociones where stock > 0
+end
+go
+
+create procedure sp_ListarPedidos
+as
+begin
+	select * from Pedidos
 end
 go
 

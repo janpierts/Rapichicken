@@ -1,0 +1,43 @@
+@model List<PedidosModel>
+@{
+    ViewData["Title"] = "Listar_Inventario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <div class="card-header">
+    Lista Pedidos
+  </div>
+  <div class="card-body">
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre Producto</th>
+                <th>Descripcion</th>
+                <th>Cantidad</th>
+                <th>Nombre Cliente</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Pedidos_id</td>
+                        <td>@item.N_Pedido</td>
+                        <td>@item.D_Pedido</td>
+                        <td>@item.Cantidad</td>
+                        <td>@item.NP_C</td>
+                        <td>
+                        </td>
+                    </tr>
+
+                }
+        </tbody>
+    </table>
+        
+
+  </div>
+</div>

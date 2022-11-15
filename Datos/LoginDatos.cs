@@ -6,34 +6,48 @@ namespace RapiChicken.Datos
 {
 	public class LoginDatos
 	{
-		public InventarioModel ObtenerId(int I_ID)
+		/*public bool Login(LoginModel oI_ID)
         {
-            var oI_ID = new InventarioModel();
-            var cn = new Conexion();
-            using (var con = new SqlConnection(cn.getconexion()))
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("sp_ObtenerIdInventario", con);
-                cmd.Parameters.AddWithValue("I_ID",I_ID);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                using(var dr = cmd.ExecuteReader())
+            bool rpta;
+			CuentaModel _CuentaModel = new CuentaModel();
+			
+			try
+			{
+			var cn = new Conexion();
+			using (var con = new SqlConnection(cn.getconexion()))
                 {
-					
-                    while (dr.Read())
-                    {
-                        oI_ID.InventarioId = Convert.ToInt32(dr["Inventario_id"]);
-                        oI_ID.NProducto = dr["n_producto"].ToString();
-                        oI_ID.Descripcion = dr["descripcion"].ToString();
-                        oI_ID.TipoProducto = dr["tipo_producto"].ToString();
-                        oI_ID.EstadoProducto = dr["estado_producto"].ToString();
-                        oI_ID.Stock = Convert.ToInt32(dr["stock"]);
-                        oI_ID.DetalleUnidad = dr["detalle_unidad"].ToString();
-						
-                    }
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Login", con);
+                    cmd.Parameters.AddWithValue("NP", oI_ID.NU);
+                    cmd.Parameters.AddWithValue("AP", oI_ID.PU);
+					cmd.CommandType = CommandType.StoredProcedure;
+                    
+					using(var dr = cmd.ExecuteReader())
+					{
+						while(dr.Read())
+						{
+							_CuentaModel.PersonalId = Convert.ToInt32(dr["Personas_id"]);
+							_CuentaModel.NPersonal = dr["nombres"].ToString();
+							_CuentaModel.APersonal = dr["apellidos"].ToString();
+							_CuentaModel.PTel = Convert.ToInt32(dr["telefono"]);
+							_CuentaModel.FN = Convert.ToDateTime(dr["f_nacimiento"]);
+							_CuentaModel.Dni = Convert.ToInt32(dr["dni"]);
+							_CuentaModel.Dir = dr["direccion"].ToString();
+							_CuentaModel.sex = Convert.ToChar(dr["sexo"]);
+							_CuentaModel.RolesId = Convert.ToInt32(dr["Roles_id"]);
+							_CuentaModel.NRoles = dr["name"].ToString();
+							_CuentaModel.Descripcion = dr["description"].ToString();
+						}
+					}
                 }
-            }
-            return oI_ID;
-        }
+			rpta = true;
+			}
+			catch (Exception e)
+			{
+				string error = e.Message;
+                rpta = false;
+			}
+			return rpta;
+		}*/
 	}
 }

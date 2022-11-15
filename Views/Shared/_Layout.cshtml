@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-@model List<LoginModel>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -14,10 +13,6 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">RapiChicken</a>
-                @foreach(var item in Model)
-                {
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@item.RolesId</a>
-                }
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -55,7 +50,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="G_Personal" asp-action="Listar_Personal">Carrito de compras</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="G_Personal" asp-action="Listar_Personal">Pedidos</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="G_Pedidos" asp-action="ListarPedidos">Pedidos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="C_Cuenta" asp-action="FGuardar_Cuenta">Crear Usuario</a>

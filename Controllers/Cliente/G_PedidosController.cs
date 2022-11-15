@@ -20,6 +20,12 @@ namespace RapiChicken.Controllers.Cliente
             var oLista = _PromocionesDatos.Listar();
             return View(oLista);
         }
+        
+        public IActionResult ListarPedidos()
+        {
+            var oLista = _PedidosDatos.Listar();
+            return View(oLista);
+        }
         /*
         public IActionResult FGuardar_Inventario()
         {
