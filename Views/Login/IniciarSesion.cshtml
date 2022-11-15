@@ -1,0 +1,27 @@
+@model LoginModel
+@{
+	ViewData["Title"] = "IniciarSesion";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <div class="card-header">
+    Guardar Producto
+  </div>
+  <div class="card-body">
+        <form asp-action="IniciarSesion" asp-controller="Login" method="post">
+       <div class="mb-3">
+            <label class="form-label">Nombre de Producto</label>
+                <input asp-for="User" type="text" class="form-control">
+                <span asp-validation-for="User" class="text-danger"></span>
+       </div>
+       <div class="mb-3">
+            <label class="form-label">Descripcion del producto</label>
+                <input asp-for="Pass" type="password" class="form-control">
+                <span asp-validation-for="Pass" class="text-danger"></span>
+       </div>
+       <button type="submit" class="btn btn-primary">Guardar</button>
+       <a asp-action="FGuardar_Cuenta" asp-controller="C_Cuenta" class="btn btn-warning">Volver a la lista</a>
+    </form>
+  </div>
+</div>

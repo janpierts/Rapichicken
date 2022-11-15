@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace RapiChicken.ComponentModel
+namespace RapiChicken.Models
 {
 	public class LoginModel
 	{
