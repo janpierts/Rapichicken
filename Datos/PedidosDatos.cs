@@ -33,14 +33,14 @@ namespace RapiChicken.Datos
             }
             return oLista;
         }
-        public InventarioModel ObtenerId(int I_ID)
+        public PedidosModel ObtenerId(int I_ID)
         {
-            var oI_ID = new InventarioModel();
+            var oI_ID = new PedidosModel();
             var cn = new Conexion();
             using (var con = new SqlConnection(cn.getconexion()))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("sp_ObtenerIdInventario", con);
+                SqlCommand cmd = new SqlCommand("sp_ObtenerIdPedido", con);
                 cmd.Parameters.AddWithValue("I_ID",I_ID);
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -48,13 +48,11 @@ namespace RapiChicken.Datos
                 {
                     while (dr.Read())
                     {
-                        oI_ID.InventarioId = Convert.ToInt32(dr["Inventario_id"]);
-                        oI_ID.NProducto = dr["n_producto"].ToString();
-                        oI_ID.Descripcion = dr["descripcion"].ToString();
-                        oI_ID.TipoProducto = dr["tipo_producto"].ToString();
-                        oI_ID.EstadoProducto = dr["estado_producto"].ToString();
-                        oI_ID.Stock = Convert.ToInt32(dr["stock"]);
-                        oI_ID.DetalleUnidad = dr["detalle_unidad"].ToString();
+                        oI_ID.Pedidos_id = Convert.ToInt32(dr["Pedidos_id"]);
+                        oI_ID.N_Pedido = dr["N_Pedido"].ToString();
+                        oI_ID.D_Pedido = dr["D_Pedido"].ToString();
+                        oI_ID.Cantidad = Convert.ToInt32(dr["Cantidad"]);
+                        oI_ID.NP_C = dr["NP_C"].ToString();
                     }
                 }
             }
@@ -160,7 +158,7 @@ namespace RapiChicken.Datos
                 using (var con = new SqlConnection(cn.getconexion()))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("sp_EliminarInventario", con);
+                    SqlCommand cmd = new SqlCommand("sp_EliminarPedido", con);
                     cmd.Parameters.AddWithValue("I_Id", I_ID);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();

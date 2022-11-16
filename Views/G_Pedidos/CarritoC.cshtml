@@ -6,7 +6,7 @@
 
 <div class="card">
   <div class="card-header">
-    Lista Pedidos
+    Carrito de compras
   </div>
   <div class="card-body">
 
@@ -31,6 +31,8 @@
                         <td>@item.Cantidad</td>
                         <td>@item.NP_C</td>
                         <td>
+                        <a asp-action="Editar_SP" asp-controller="G_Pedidos" class="btn btn-warning btn-sm" asp-route-I_ID="@item.Pedidos_id">Cantidad</a>
+						<a asp-action="Eliminar_Pedido" asp-controller="G_Pedidos" class="btn btn-danger btn-sm" asp-route-I_ID="@item.Pedidos_id">Eliminar</a>
                         </td>
                     </tr>
 

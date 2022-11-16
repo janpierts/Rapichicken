@@ -463,6 +463,22 @@ begin
 end
 go
 
+create procedure sp_ObtenerIdPedido(
+@I_ID int
+)
+as
+begin
+	select * from Pedidos where @I_ID=Pedidos_id
+end
+go
+
+create procedure sp_EliminarPedido(@I_Id int)
+as
+begin
+	delete from Pedidos where Pedidos_id = @I_Id
+end
+go
+
 create procedure sp_EditarStockP(
 @I_Id int,
 @I_Stock int

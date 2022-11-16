@@ -26,6 +26,12 @@ namespace RapiChicken.Controllers.Cliente
             var oLista = _PedidosDatos.Listar();
             return View(oLista);
         }
+        
+        public IActionResult CarritoC()
+        {
+            var oLista = _PedidosDatos.Listar();
+            return View(oLista);
+        }
         /*
         public IActionResult FGuardar_Inventario()
         {
@@ -59,24 +65,24 @@ namespace RapiChicken.Controllers.Cliente
             else
                 return View();
         }
-        /*
-        public IActionResult Eliminar_PInventario(int I_ID)
+        
+        public IActionResult Eliminar_Pedido(int I_ID)
         {
             //METODO SOLO DEVUELVE LA VISTA
-            var oDI = _InventarioDatos.ObtenerId(I_ID);
+            var oDI = _PedidosDatos.ObtenerId(I_ID);
             return View(oDI);
         }
 
         [HttpPost]
-        public IActionResult Eliminar_PInventario(InventarioModel odi)
+        public IActionResult Eliminar_Pedido(PedidosModel odi)
         {
 
-            var down = _InventarioDatos.Eliminar(odi.InventarioId);
+            var down = _PedidosDatos.Eliminar(odi.Pedidos_id);
 
             if (down)
                 return RedirectToAction("Listar_Catalogo");
             else
                 return View();
-        }*/
+        }
     }
 }
